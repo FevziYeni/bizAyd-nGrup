@@ -26,20 +26,22 @@ import {
 const projects = [
   {
     title: "Ürgüplü Projesi",
-    description: "Toplumsal konut projesi",
+    description: "Bayrampaşa’da kat karşılığı toplumsal konut projesi.",
     images: [ürgüplü],
   },
   {
     id: 3,
     title: "Kağıthane Yaşam Evleri",
-    description: "Toplumsal konut projesi.",
+    description:
+      "İstanbul Kağıthane’de güvenli ve modern kentsel dönüşüm projeleri.",
     date: "2019-01-01",
     images: [kagıthane, kagıthane1, kagıthane2],
   },
   {
     id: 1,
     title: "İSKOM – İstanbul Su Kontrol ve Otomasyon Merkezi (Ortak Projeler)",
-    description: "Büyük ölçekli su kontrol ve otomasyon tesisi.",
+    description:
+      "Büyük ölçekli su kontrol ve otomasyon tesisi projeleri. Kat karşılığı ve kentsel dönüşüm alanında referanslarımızdandır.",
     date: "2019-01-01",
     images: [image1, image2, image3, image4, image5],
   },
@@ -62,9 +64,11 @@ const ProjectCardsSection = () => {
 
   return (
     <AnimatedSection className="p-8 py-20">
-      <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white  to-gold  bg-clip-text  text-transparent text-center pb-8">
+      {/* Başlık */}
+      <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gold bg-clip-text text-transparent text-center pb-8">
         Projelerimiz
       </h1>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
         {projects.map((project, i) => (
           <Card className="rounded-lg" key={i}>
@@ -74,10 +78,17 @@ const ProjectCardsSection = () => {
                   <CarouselItem key={idx}>
                     <img
                       src={img}
-                      alt={`${project.title} ${idx + 1}`}
+                      alt={`${project.title} Görsel ${
+                        idx + 1
+                      } - Bayrampaşa ve İstanbul Kentsel Dönüşüm`}
                       className="w-full h-[300px] object-cover rounded-lg cursor-pointer"
                       onClick={() =>
-                        openModal(img, `${project.title} ${idx + 1}`)
+                        openModal(
+                          img,
+                          `${project.title} Görsel ${
+                            idx + 1
+                          } - Bayrampaşa ve İstanbul Kentsel Dönüşüm`
+                        )
                       }
                     />
                   </CarouselItem>
@@ -93,12 +104,13 @@ const ProjectCardsSection = () => {
 
             <div className="pt-4 text-left">
               <h2 className="text-lg font-semibold">{project.title}</h2>
-              <p>{project.description}</p>
+              <p className="text-base text-white/90">{project.description}</p>
             </div>
           </Card>
         ))}
       </div>
 
+      {/* Modal */}
       {modalImage && (
         <div
           onClick={closeModal}
@@ -113,16 +125,19 @@ const ProjectCardsSection = () => {
           <button
             onClick={closeModal}
             className="absolute top-5 right-5 text-white text-3xl font-bold cursor-pointer"
-            aria-label="Close modal"
+            aria-label="Kapat"
           >
             &times;
           </button>
         </div>
       )}
+
+      {/* Projelerimiz Butonu */}
       <div className="flex justify-center mt-4">
         <button
           onClick={() => navigate("/projects")}
-          className="inline-block  py-4 bg-black text-white text-lg font-semibold rounded-lg hover:bg-white hover:text-black transition-colors duration-300 shadow-lg w-full md:w-2/3 text-center"
+          aria-label="Bayrampaşa ve İstanbul Kentsel Dönüşüm Projelerimizi Görüntüle"
+          className="inline-block py-4 bg-black text-white text-lg font-semibold rounded-lg hover:bg-white hover:text-black transition-colors duration-300 shadow-lg w-full md:w-2/3 text-center"
         >
           Projelerimiz
         </button>

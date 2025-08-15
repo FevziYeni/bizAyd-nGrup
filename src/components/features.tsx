@@ -16,11 +16,17 @@ const FeaturesSection = () => {
             icon={faSmile}
             size="2x"
             className="text-yellow-400 mb-2"
+            aria-hidden="true"
           />
-          <h3 className="text-lg font-semibold mb-1">%100 Memnuniyet</h3>
+          <h3
+            className="text-lg font-semibold mb-1"
+            aria-label="Müşteri memnuniyeti Bayrampaşa kentsel dönüşüm"
+          >
+            %100 Müşteri Memnuniyeti
+          </h3>
           <p className="text-sm">
-            Müşteri memnuniyetini her zaman ön planda tutarak projelerimizi
-            tamamlıyoruz.
+            Bayrampaşa ve İstanbul’daki kat karşılığı ve kentsel dönüşüm
+            projelerinde, müşteri memnuniyetini her zaman ön planda tutuyoruz.
           </p>
         </div>
 
@@ -29,11 +35,18 @@ const FeaturesSection = () => {
             icon={faBolt}
             size="2x"
             className="text-yellow-400 mb-2"
+            aria-hidden="true"
           />
-          <h3 className="text-lg font-semibold mb-1">Hızlı Teslimat</h3>
+          <h3
+            className="text-lg font-semibold mb-1"
+            aria-label="Hızlı teslimat ve proje süresi"
+          >
+            Hızlı ve Zamanında Teslimat
+          </h3>
           <p className="text-sm">
-            Belirlenen zaman çizelgesine sadık kalarak hızlı ve kaliteli
-            çözümler sunuyoruz.
+            Projelerimizi, İstanbul’daki kentsel dönüşüm ve toplu konut
+            projelerinde belirlenen zaman çizelgesine uygun şekilde hızlı ve
+            kaliteli olarak tamamlıyoruz.
           </p>
         </div>
 
@@ -42,10 +55,17 @@ const FeaturesSection = () => {
             icon={faShieldAlt}
             size="2x"
             className="text-yellow-400 mb-2"
+            aria-hidden="true"
           />
-          <h3 className="text-lg font-semibold mb-1">Güvenilirlik</h3>
+          <h3
+            className="text-lg font-semibold mb-1"
+            aria-label="Güvenilir müteahhit ve inşaat firması"
+          >
+            Güvenilirlik ve Tecrübe
+          </h3>
           <p className="text-sm">
-            20+ yıllık tecrübemizle sektörümüzde güvenin simgesi olduk.
+            17+ yıllık tecrübemizle Bayrampaşa ve İstanbul’da kentsel dönüşüm
+            projelerinde güvenilir bir müteahhit firması olarak çalışıyoruz.
           </p>
         </div>
       </div>

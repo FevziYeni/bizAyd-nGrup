@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBriefcase,
@@ -52,6 +51,7 @@ const ProjectsSection = () => {
       <section
         ref={ref}
         className="w-full bg-gradient-to-r from-white via-gold to-white text-black py-10"
+        aria-label="Bayrampaşa ve İstanbul Kentsel Dönüşüm Projeleri İstatistikleri"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center items-center">
           <div className="flex flex-col items-center justify-center">
@@ -59,8 +59,14 @@ const ProjectsSection = () => {
               icon={faBuilding}
               size="2x"
               className="text-yellow-600 mb-2"
+              aria-hidden="true"
             />
-            <p className="text-base">Toplam Proje</p>
+            <h3
+              className="text-base mb-1"
+              aria-label="Toplam Bayrampaşa kentsel dönüşüm projesi sayısı"
+            >
+              Toplam Bayrampaşa Kentsel Dönüşüm Projesi
+            </h3>
             <h2 className="text-4xl font-bold mb-1">{projects}</h2>
           </div>
 
@@ -69,9 +75,15 @@ const ProjectsSection = () => {
               icon={faBriefcase}
               size="2x"
               className="text-yellow-600 mb-2"
+              aria-hidden="true"
             />
-            <p className="text-base">Yıl Tecrübe</p>
-            <h2 className="text-4xl font-bold mb-1">{experience}</h2>
+            <h3
+              className="text-base mb-1"
+              aria-label="Yeni RM İnşaat tecrübe yılı"
+            >
+              İstanbul’da Güvenli İnşaat Tecrübesi
+            </h3>
+            <h2 className="text-4xl font-bold mb-1">{experience} Yıl</h2>
           </div>
 
           <div className="flex flex-col items-center justify-center">
@@ -79,8 +91,14 @@ const ProjectsSection = () => {
               icon={faUsers}
               size="2x"
               className="text-yellow-600 mb-2"
+              aria-hidden="true"
             />
-            <p className="text-base">Ekip Üyesi</p>
+            <h3
+              className="text-base mb-1"
+              aria-label="Bayrampaşa ve İstanbul kentsel dönüşüm ekibi"
+            >
+              Kat Karşılığı ve Kentsel Dönüşüm Ekibi
+            </h3>
             <h2 className="text-4xl font-bold mb-1">{team}</h2>
           </div>
         </div>

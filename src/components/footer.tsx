@@ -16,11 +16,11 @@ const Footer: React.FC = () => {
         {/* Şirket Bilgisi */}
         <div>
           <h3 className="text-xl font-bold mb-3 text-yellow-500">
-            YENİRM MÜHENDİSLİK
+            YENİ RM İNŞAAT
           </h3>
           <p className="text-sm">
-            İstanbul/Bayrampaşa'da yer alan ofisimiz, ulaşım açısından oldukça
-            elverişli bir konumda yer almaktadır.
+            İstanbul/Bayrampaşa merkezli müteahhit firmamız, kat karşılığı ve
+            kentsel dönüşüm projelerinde güvenle hizmet vermektedir.
           </p>
         </div>
 
@@ -31,22 +31,34 @@ const Footer: React.FC = () => {
           </h4>
           <ul className="space-y-1 text-sm">
             <li>
-              <Link to="/" className="hover:underline">
+              <Link to="/" className="hover:underline" aria-label="Anasayfa">
                 Anasayfa
               </Link>
             </li>
             <li>
-              <Link to="/projeler" className="hover:underline">
+              <Link
+                to="/projeler"
+                className="hover:underline"
+                aria-label="Projelerimiz"
+              >
                 Projeler
               </Link>
             </li>
             <li>
-              <Link to="/hakkimizda" className="hover:underline">
+              <Link
+                to="/hakkimizda"
+                className="hover:underline"
+                aria-label="Hakkımızda"
+              >
                 Hakkımızda
               </Link>
             </li>
             <li>
-              <Link to="/iletisim" className="hover:underline">
+              <Link
+                to="/iletisim"
+                className="hover:underline"
+                aria-label="İletişim"
+              >
                 İletişim
               </Link>
             </li>
@@ -60,7 +72,11 @@ const Footer: React.FC = () => {
           </h4>
           <ul className="space-y-1 text-sm">
             <li>
-              <a href="tel:+905323322960" className="hover:underline">
+              <a
+                href="tel:+905323322960"
+                className="hover:underline"
+                aria-label="Telefon"
+              >
                 +90 (532) 332 29 60
               </a>
             </li>
@@ -68,6 +84,7 @@ const Footer: React.FC = () => {
               <a
                 href="mailto:yenirminsaat@hotmail.com"
                 className="hover:underline"
+                aria-label="E-posta"
               >
                 yenirminsaat@hotmail.com
               </a>
@@ -98,7 +115,9 @@ const Footer: React.FC = () => {
 
       {/* Alt Bilgi */}
       <div className="border-t border-gray-300 pt-4 text-center text-sm text-gray-700">
-        © {new Date().getFullYear()} Yeni RM İnşaat. Tüm hakları saklıdır.
+        © {new Date().getFullYear()} Yeni RM İnşaat | Bayrampaşa, İstanbul. Kat
+        karşılığı ve kentsel dönüşüm projelerinde güvenle hizmet vermektedir.
+        Tüm hakları saklıdır.
       </div>
     </AnimatedSection>
   );

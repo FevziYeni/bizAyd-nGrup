@@ -8,15 +8,20 @@ const HeroSection = () => {
 
   return (
     <section className="relative w-full h-[600px] overflow-hidden">
+      {/* Arka plan görseli */}
       <div className="relative w-full h-full">
         <img
           src={bgImage}
-          alt="Landing Page Visual"
+          alt="Bayrampaşa Kat Karşılığı ve Kentsel Dönüşüm Projeleri"
           className="w-full h-full object-cover scale-110 transition-transform duration-[8s] ease-out hover:scale-100"
         />
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/40 to-transparent z-10 pointer-events-none" />
       </div>
+
+      {/* Üst katman karartma */}
       <div className="absolute inset-0 bg-black bg-opacity-40 z-10" />
+
+      {/* İçerik */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center mx-4 z-20 font-bold">
         <AnimatedSection>
           <h1
@@ -29,15 +34,19 @@ const HeroSection = () => {
             YUVANIZI YENİLEYİN
           </h1>
         </AnimatedSection>
+
         <AnimatedSection>
           <p className="text-lg mt-4 text-white">
-            Projelerimiz hakkında daha fazla bilgi edinin.
+            Bayrampaşa ve İstanbul’da güvenli kat karşılığı ve kentsel dönüşüm
+            projelerimizi keşfedin.
           </p>
         </AnimatedSection>
+
         <AnimatedSection>
           <div className="mt-4">
             <button
               onClick={() => navigate("/projects")}
+              aria-label="Bayrampaşa Kat Karşılığı ve Kentsel Dönüşüm Projelerimiz"
               className="px-6 py-2 border border-white text-white rounded-lg hover:bg-white hover:text-black transition"
             >
               Projelerimiz

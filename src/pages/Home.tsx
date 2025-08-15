@@ -17,18 +17,25 @@ const Home: React.FC = () => {
         <title>Yeni RM İnşaat | Kentsel Dönüşüm ve Konut Projeleri</title>
         <meta
           name="description"
-          content="Yeni RM İnşaat, 17 yıllık tecrübesiyle İstanbul’da güvenli, modern ve sürdürülebilir inşaat projeleri sunar. Kentsel dönüşümde öncü bir firma."
+          content="Bayrampaşa ve İstanbul’da kat karşılığı ve kentsel dönüşüm projelerinde öncü firma: Yeni RM İnşaat. 17 yıllık tecrübemizle güvenli, modern ve sürdürülebilir projeler sunuyoruz.
+"
         />
         <meta
           name="keywords"
-          content="yeni rm, yeni rm inşaat, bayrampaşa inşaat, bayrampaşa müteahhit, bayrampaşa konut projeleri, istanbul müteahhit firmaları, toplu konut bayrampaşa, bayrampaşa yapı firmaları, istanbul inşaat firmaları, güvenilir müteahhit, kurumsal müteahhit, bayrampaşa kentsel dönüşüm, yeni konut projeleri, inşaat şirketi istanbul, yeni rm yapı, kaliteli konut projeleri, uygun fiyatlı konutlar, proje geliştirme firması, anahtar teslim inşaat, toplu konut müteahhit, modern konut projeleri, bayrampaşa yapı denetim, mimari proje firmaları, müteahhitlik hizmetleri, konut projeleri 2025, yeni yapılan konutlar, istanbul konut projeleri, bayrampaşa apartman yapımı, yeni rm mimarlık, inşaat projeleri istanbul, güvenilir yapı firması, lüks konut inşaat, yapı müteahhidi, bayrampaşa bina yenileme
+          content="bayrampaşa müteahhit, bayrampaşa kat karşılığı, bayrampaşa kentsel dönüşüm, istanbul müteahhit firmaları, yeni rm inşaat,yeni rm, rm inşaat,rm insaat, yeni rm, yenirm güvenilir müteahhit, kat karşılığı projeler, toplu konut bayrampaşa, istanbul kentsel dönüşüm, modern konut projeleri
+
 "
         />
-        <meta property="og:title" content="Yeni RM İnşaat" />
+        <meta
+          property="og:title"
+          content="Yeni RM İnşaat | Bayrampaşa Kat Karşılığı & Kentsel Dönüşüm"
+        />
         <meta
           property="og:description"
-          content="İstanbul'da 17 yıllık tecrübeye sahip güvenilir inşaat firması. Kentsel dönüşüm ve toplu konut projeleri."
+          content="Bayrampaşa ve İstanbul’da güvenilir kat karşılığı ve kentsel dönüşüm projeleri sunan Yeni RM İnşaat ile arsanızı kazanca dönüştürün."
         />
+        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:url" content="https://www.yenirm.com" />
         <meta property="og:type" content="website" />
       </Helmet>
 

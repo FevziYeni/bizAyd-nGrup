@@ -36,9 +36,9 @@ const RiskChartSection = () => {
             Kentsel Dönüşüm Neden Şart?
           </h2>
           <p className="text-lg mb-6 text-white">
-            Türkiye’nin büyük kısmı deprem riski altındadır. Eski yapılar,
-            özellikle 20 yıl ve üzeri binalar, depremde ciddi yıkılma riski
-            taşır. Kentsel dönüşüm, güvenli bir gelecek için zorunluluktur.
+            Bayrampaşa ve İstanbul’daki eski binalar, özellikle 20 yıl ve üzeri
+            yapılar, deprem riski taşır. Kentsel dönüşüm ve kat karşılığı
+            projeleri ile güvenli ve modern yaşam alanları oluşturmak mümkündür.
           </p>
           <p className="text-base text-white/90">
             Aşağıda, bina yaşına göre olası yıkılma risk yüzdesi yer almaktadır.
