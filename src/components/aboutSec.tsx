@@ -11,7 +11,7 @@ const AboutSection = () => {
         {/* Sol Metin Alanı */}
         <div className="flex flex-col justify-center space-y-4">
           <h1 className="text-6xl font-bold bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent">
-            Hakkımızda - Yeni RM İnşaat
+            Hakkımızda
           </h1>
           <p className="py-8">
             Bayrampaşa ve İstanbul’da 17 yılı aşkın süredir faaliyet gösteren

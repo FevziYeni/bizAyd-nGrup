@@ -8,7 +8,7 @@ const ContactSection = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-white p-8 py-20">
         <div>
           <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent">
-            İletişim - Yeni RM İnşaat
+            İletişim
           </h1>
           <div className="space-y-6">
             <div>
