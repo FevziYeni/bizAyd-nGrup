@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
                   BİZ AYDIN
                 </span>
                 <span className="text-sm font-bold bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent tracking-wider">
-                  İNŞAAT
+                  Grup
                 </span>
               </div>
             </div>
