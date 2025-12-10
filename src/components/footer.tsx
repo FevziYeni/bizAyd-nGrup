@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
         {/* Şirket Bilgisi */}
         <div>
           <h3 className="text-xl font-bold mb-3 text-yellow-500">
-            YENİ RM İNŞAAT
+            BİZ AYDIN GRUP
           </h3>
           <p className="text-sm">
             İstanbul/Bayrampaşa merkezli müteahhit firmamız, kat karşılığı ve

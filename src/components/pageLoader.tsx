@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import LOGO from "../assets/LOGOK.png"; // Logo dosyanı buraya koy
+import LOGO from "../assets/LOGOK.jpg"; // Logo dosyanı buraya koy
 import { Progress } from "./ui/progress";
 
 const PageLoader = () => {

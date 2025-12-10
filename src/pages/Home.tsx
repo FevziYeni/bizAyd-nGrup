@@ -14,25 +14,27 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Yeni RM İnşaat | Kentsel Dönüşüm ve Konut Projeleri</title>
+        <title>
+          Biz Aydın Grup İnşaat | Kentsel Dönüşüm ve Konut Projeleri
+        </title>
         <meta
           name="description"
-          content="Bayrampaşa ve İstanbul’da kat karşılığı ve kentsel dönüşüm projelerinde öncü firma: Yeni RM İnşaat. 17 yıllık tecrübemizle güvenli, modern ve sürdürülebilir projeler sunuyoruz.
+          content="Bayrampaşa ve İstanbul’da kat karşılığı ve kentsel dönüşüm projelerinde öncü firma: Biz Aydın Grup İnşaat. 17 yıllık tecrübemizle güvenli, modern ve sürdürülebilir projeler sunuyoruz.
 "
         />
         <meta
           name="keywords"
-          content="bayrampaşa müteahhit, bayrampaşa kat karşılığı, bayrampaşa kentsel dönüşüm, istanbul müteahhit firmaları, yeni rm inşaat,yeni rm, rm inşaat,rm insaat, yeni rm, yenirm güvenilir müteahhit, kat karşılığı projeler, toplu konut bayrampaşa, istanbul kentsel dönüşüm, modern konut projeleri
+          content="bayrampaşa müteahhit, bayrampaşa kat karşılığı, bayrampaşa kentsel dönüşüm, istanbul müteahhit firmaları, Biz Aydın Grup inşaat,Biz Aydın Grup, rm inşaat,rm insaat, Biz Aydın Grup, yenirm güvenilir müteahhit, kat karşılığı projeler, toplu konut bayrampaşa, istanbul kentsel dönüşüm, modern konut projeleri
 
 "
         />
         <meta
           property="og:title"
-          content="Yeni RM İnşaat | Bayrampaşa Kat Karşılığı & Kentsel Dönüşüm"
+          content="Biz Aydın Grup İnşaat | Bayrampaşa Kat Karşılığı & Kentsel Dönüşüm"
         />
         <meta
           property="og:description"
-          content="Bayrampaşa ve İstanbul’da güvenilir kat karşılığı ve kentsel dönüşüm projeleri sunan Yeni RM İnşaat ile arsanızı kazanca dönüştürün."
+          content="Bayrampaşa ve İstanbul’da güvenilir kat karşılığı ve kentsel dönüşüm projeleri sunan Biz Aydın Grup İnşaat ile arsanızı kazanca dönüştürün."
         />
         <meta property="og:image" content="/og-image.jpg" />
         <meta property="og:url" content="https://www.yenirm.com" />

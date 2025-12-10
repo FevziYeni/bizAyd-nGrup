@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import LOGO from "../assets/LOGOK.png";
+import LOGO from "../assets/LOGOK.jpg";
 import { Button } from "../components/ui/Button";
 import clsx from "clsx";
 import { Separator } from "@radix-ui/react-separator";
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
                 onClick={() => handleNavigate("/")}
               >
                 <span className="text-2xl font-bold bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent">
-                  YENİ RM
+                  BİZ AYDIN
                 </span>
                 <span className="text-sm font-bold bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent tracking-wider">
                   İNŞAAT
