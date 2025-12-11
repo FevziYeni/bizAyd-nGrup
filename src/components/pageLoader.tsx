@@ -21,7 +21,7 @@ const PageLoader = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 bg-black flex flex-col items-center justify-center z-[9999]">
+    <div className="fixed inset-0 bg-white flex flex-col items-center justify-center z-[9999]">
       <img
         src={LOGO}
         alt="Yükleniyor"
