@@ -18,11 +18,11 @@ const AboutPage: React.FC = () => {
       </Helmet>
 
       <AnimatedSection className="py-20 px-6 text-white">
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-8 text-center bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent">
+        <h1 className="text-5xl md:text-6xl font-extrabold mb-8 text-center text-blue-900">
           Hakkımızda
         </h1>
 
-        <div className="max-w-4xl mx-auto space-y-6 text-lg md:text-xl leading-relaxed">
+        <div className="max-w-4xl mx-auto space-y-6 text-lg md:text-xl leading-relaxed text-black">
           <p>
             Sahip olduğumuz deneyim, geleceğin yapılarını inşa ediyor. Firmamız,
             17 yılı aşkın süredir inşaat ve müteahhitlik sektöründe güvenin,

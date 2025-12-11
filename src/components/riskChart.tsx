@@ -32,7 +32,7 @@ const RiskChartSection = () => {
     <AnimatedSection className="py-24 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent">
+          <h2 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-900 to-white bg-clip-text text-transparent">
             Kentsel Dönüşüm Neden Şart?
           </h2>
           <p className="text-lg mb-6 text-white">
@@ -47,7 +47,7 @@ const RiskChartSection = () => {
 
         <Card className="shadow-lg text-white">
           <CardHeader>
-            <CardTitle className="text-3xl font-bold mb-6 bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent">
+            <CardTitle className="text-3xl font-bold mb-6 bg-gradient-to-r from-white via-blue-900 to-white bg-clip-text text-transparent">
               Bina Yaşı ve Yıkılma Riski Grafiği
             </CardTitle>
           </CardHeader>

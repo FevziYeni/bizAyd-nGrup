@@ -50,10 +50,10 @@ const ProjectsSection = () => {
     <AnimatedSection className="mx-auto py-20">
       <section
         ref={ref}
-        className="w-full bg-gradient-to-r from-white via-gold to-white text-black py-10"
+        className="w-full bg-gradient-to-r from-white via-blue-900 to-white text-transparent text-black py-10"
         aria-label="Bayrampaşa ve İstanbul Kentsel Dönüşüm Projeleri İstatistikleri"
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center items-center text-black">
           <div className="flex flex-col items-center justify-center">
             <FontAwesomeIcon
               icon={faBuilding}
@@ -62,7 +62,7 @@ const ProjectsSection = () => {
               aria-hidden="true"
             />
             <h3
-              className="text-base mb-1"
+              className="text-black mb-1"
               aria-label="Toplam Bayrampaşa kentsel dönüşüm projesi sayısı"
             >
               Toplam Bayrampaşa Kentsel Dönüşüm Projesi

@@ -9,7 +9,7 @@ import AnimatedSection from "./animatedSection";
 
 const FeaturesSection = () => {
   return (
-    <AnimatedSection className="py-10 text-black bg-gradient-to-r from-white via-gold to-white px-0 rounded-md">
+    <AnimatedSection className="py-10 text-black bg-gradient-to-r from-white via-blue-900 to-white px-0 rounded-md">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
         <div className="flex flex-col items-center justify-center px-4">
           <FontAwesomeIcon

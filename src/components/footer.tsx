@@ -11,7 +11,7 @@ import AnimatedSection from "./animatedSection";
 
 const Footer: React.FC = () => {
   return (
-    <AnimatedSection className="bg-gradient-to-r from-white via-gold to-white text-black px-6 pt-8 pb-8">
+    <AnimatedSection className="bg-gradient-to-r from-white via-blue-900 to-white text-black px-6 pt-8 pb-8">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
         {/* Şirket Bilgisi */}
         <div>
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                 className="hover:underline"
                 aria-label="Telefon"
               >
-                +90 (532) 332 29 60
+                +90 (532) 405 46 77
               </a>
             </li>
             <li>

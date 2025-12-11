@@ -7,10 +7,10 @@ const ContactSection = () => {
     <AnimatedSection>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-white p-8 py-20">
         <div>
-          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent">
+          <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r text-blue-900 bg-clip-text ">
             İletişim
           </h1>
-          <div className="space-y-6">
+          <div className="space-y-6 text-black">
             <div>
               <h2 className="text-lg font-semibold">Adres</h2>
               <p aria-label="Yeni RM İnşaat Bayrampaşa Ofisi Adresi">
@@ -20,7 +20,7 @@ const ContactSection = () => {
             </div>
             <div>
               <h2 className="text-lg font-semibold">Telefon</h2>
-              <p aria-label="Telefon Numarası">+90 (532) 332 29 60</p>
+              <p aria-label="Telefon Numarası">+90 (532) 405 46 77</p>
             </div>
             <div>
               <h2 className="text-lg font-semibold">E-posta</h2>

@@ -65,7 +65,7 @@ const ProjectCardsSection = () => {
   return (
     <AnimatedSection className="p-8 py-20">
       {/* Başlık */}
-      <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gold bg-clip-text text-transparent text-center pb-8">
+      <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-950 to-white bg-clip-text text-transparent text-center pb-8">
         Projelerimiz
       </h1>
 

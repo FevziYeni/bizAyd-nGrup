@@ -9,8 +9,8 @@ const AboutSection = () => {
     <AnimatedSection>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start text-white p-8 py-20">
         {/* Sol Metin Alanı */}
-        <div className="flex flex-col justify-center space-y-4">
-          <h1 className="text-6xl font-bold bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent">
+        <div className="flex flex-col justify-center space-y-4 text-black">
+          <h1 className="text-6xl font-bold  text-blue-900 bg-clip-text ">
             Hakkımızda
           </h1>
           <p className="py-8">

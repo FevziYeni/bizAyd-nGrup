@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
         <nav
           className={clsx(
             lastScrollY === 0
-              ? "relative bg-black/60 shadow-none"
+              ? "relative  shadow-none"
               : "fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur-md shadow-md transition-transform duration-300",
             show ? "translate-y-0" : "-translate-y-full"
           )}
@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
               <img
                 src={LOGO}
                 alt="Logo"
-                className="h-14 cursor-pointer"
+                className="h-20 cursor-pointer"
                 onClick={() => handleNavigate("/")}
               />
 
@@ -72,11 +72,11 @@ const Navbar: React.FC = () => {
                 className="flex flex-col leading-tight cursor-pointer"
                 onClick={() => handleNavigate("/")}
               >
-                <span className="text-2xl font-bold bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent">
+                <span className="text-2xl font-bold bg-gradient-to-r text-blue-900 bg-clip-text ">
                   BİZ AYDIN
                 </span>
-                <span className="text-sm font-bold bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent tracking-wider">
-                  Grup
+                <span className="text-sm font-bold bg-gradient-to-r text-gold bg-clip-text tracking-wider">
+                  GRUP
                 </span>
               </div>
             </div>

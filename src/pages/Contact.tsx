@@ -18,7 +18,7 @@ const ContactPage: React.FC = () => {
       </Helmet>
 
       <AnimatedSection className="py-20 px-6 text-white">
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-12 text-center bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent">
+        <h1 className="text-5xl md:text-6xl font-extrabold mb-12 text-center text-blue-900">
           İletişim
         </h1>
 
@@ -35,7 +35,7 @@ const ContactPage: React.FC = () => {
                 href="tel:+905323322960"
                 className="text-yellow-400 hover:underline"
               >
-                +90 (532) 332 29 60
+                +90 (532) 405 46 77
               </a>
             </div>
             <div>

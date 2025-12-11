@@ -168,7 +168,7 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <AnimatedSection className="py-20 px-6 text-white">
-      <h2 className="text-6xl font-bold bg-gradient-to-r from-white via-gold to-white bg-clip-text text-transparent text-center mb-12">
+      <h2 className="text-6xl font-bold bg-gradient-to-r text-blue-900 bg-clip-text  text-center mb-12">
         Projeler
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">

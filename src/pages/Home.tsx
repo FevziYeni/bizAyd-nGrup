@@ -43,7 +43,7 @@ const Home: React.FC = () => {
 
       <div className="rounded-lg">
         <HeroSection />
-        <RiskChartSection />
+        {/* <RiskChartSection /> */}
         <ProjectCardsSection />
         <ProjectsSection />
         <ContactSection />
