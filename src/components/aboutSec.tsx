@@ -14,7 +14,7 @@ const AboutSection = () => {
             Hakkımızda
           </h1>
           <p className="py-8">
-            Güngören / İstanbul’da 17 yılı aşkın süredir faaliyet gösteren Yeni
+            Güngören / İstanbul’da 40 yılı aşkın süredir faaliyet gösteren Yeni
             RM İnşaat, kentsel dönüşüm ve kat karşılığı projelerde öncü bir
             firma olarak birçok büyük ölçekli projeyi başarıyla tamamlamıştır.
             Kaliteden ödün vermeyen anlayışımız ve sürdürülebilir yapı
@@ -23,7 +23,7 @@ const AboutSection = () => {
           </p>
           <div className="mt-4 space-x-4">
             <button
-              className="bg-black px-6 py-2 rounded-md hover:bg-gold hover:text-black transition"
+              className="bg-black px-6 py-2 rounded-md text-white hover:bg-gold hover:text-black transition"
               onClick={() => navigate("/about")}
               aria-label="Hakkımızda sayfasına git"
             >

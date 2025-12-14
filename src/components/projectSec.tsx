@@ -31,7 +31,7 @@ const projects = [
   },
   {
     id: 3,
-    title: "Kağıthane Yaşam Evleri",
+    title: "İstanbul/Kartal Projesi",
     description: "",
     date: "2019-01-01",
     images: [kartal],

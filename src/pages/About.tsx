@@ -9,7 +9,7 @@ const AboutPage: React.FC = () => {
         <title>Hakkımızda | Yeni RM İnşaat</title>
         <meta
           name="description"
-          content="Yeni RM İnşaat, 17 yıllık tecrübesiyle güvenli, kaliteli ve sürdürülebilir inşaat projeleri sunar. İstanbul'da birçok büyük ölçekli projeyi başarıyla tamamlamıştır."
+          content="Yeni RM İnşaat, 40 yıllık tecrübesiyle güvenli, kaliteli ve sürdürülebilir inşaat projeleri sunar. İstanbul'da birçok büyük ölçekli projeyi başarıyla tamamlamıştır."
         />
         <meta
           name="keywords"

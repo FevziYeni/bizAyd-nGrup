@@ -42,7 +42,7 @@ export const partnerProjects = [
   },
   {
     id: 3,
-    title: "Kağıthane Yaşam Evleri",
+    title: "İstanbul/Kartal Projesi",
     description: "Toplumsal konut projesi.",
     date: "2019-01-01",
     image:

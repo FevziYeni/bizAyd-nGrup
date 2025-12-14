@@ -37,8 +37,10 @@ const HeroSection = () => {
 
         <AnimatedSection>
           <p className="text-lg mt-4 text-white">
-            Güngören / İstanbul’da güvenli kat karşılığı ve kentsel dönüşüm
-            projelerimizi keşfedin.
+            Biz Aydın Grup Yapı Mimarlık, 40 yıldır İstanbul’da faaliyet
+            gösteren bir inşaat firmasıdır. Konut inşaatı, kentsel dönüşüm,
+            villa yapımı ve anahtar teslim proje hizmetlerinde faaliyet
+            göstermekteyiz
           </p>
         </AnimatedSection>
 

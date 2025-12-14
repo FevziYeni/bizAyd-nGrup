@@ -64,7 +64,7 @@ const FeaturesSection = () => {
             Güvenilirlik ve Tecrübe
           </h3>
           <p className="text-sm">
-            17+ yıllık tecrübemizle Güngören / İstanbul’da kentsel dönüşüm
+            40+ yıllık tecrübemizle Güngören / İstanbul’da kentsel dönüşüm
             projelerinde güvenilir bir müteahhit firması olarak çalışıyoruz.
           </p>
         </div>

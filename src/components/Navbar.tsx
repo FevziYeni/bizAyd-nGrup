@@ -72,11 +72,8 @@ const Navbar: React.FC = () => {
                 className="flex flex-col leading-tight cursor-pointer"
                 onClick={() => handleNavigate("/")}
               >
-                <span className="text-2xl font-bold bg-gradient-to-r text-gold bg-clip-text ">
-                  BİZ AYDIN GRUP
-                </span>
-                <span className="text-sm font-bold bg-gradient-to-r text-blue-950 bg-clip-text tracking-wider">
-                  YAPI
+                <span className="text-xl font-bold bg-gradient-to-r text-gold bg-clip-text ">
+                  BİZ AYDIN GRUP YAPI
                 </span>
               </div>
             </div>
@@ -85,25 +82,25 @@ const Navbar: React.FC = () => {
             <div className="hidden md:flex space-x-6">
               <Button
                 onClick={() => handleNavigate("/")}
-                className="text-sm text-white hover:bg-yellow-300 hover:text-black transition"
+                className="text-sm text-white hover:bg-yellow-300 hover:text-black transition bg-blue-900"
               >
                 Anasayfa
               </Button>
               <Button
                 onClick={() => handleNavigate("/projects")}
-                className="text-sm text-white hover:bg-yellow-300 hover:text-black transition"
+                className="text-sm text-white hover:bg-yellow-300 hover:text-black transition bg-blue-900"
               >
                 Projelerimiz
               </Button>
               <Button
                 onClick={() => handleNavigate("/about")}
-                className="text-sm text-white hover:bg-yellow-300 hover:text-black transition"
+                className="text-sm text-white hover:bg-yellow-300 hover:text-black transition bg-blue-900"
               >
                 Hakkımızda
               </Button>
               <Button
                 onClick={() => handleNavigate("/contact")}
-                className="text-sm text-white hover:bg-yellow-300 hover:text-black transition"
+                className="text-sm text-white hover:bg-yellow-300 hover:text-black transition bg-blue-900"
               >
                 İletişim
               </Button>

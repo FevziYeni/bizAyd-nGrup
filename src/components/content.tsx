@@ -42,7 +42,7 @@ const ProjectsSection = () => {
     };
 
     animateCount(15, setProjects);
-    animateCount(17, setExperience);
+    animateCount(40, setExperience);
     animateCount(56, setTeam);
   }, [inView]);
 
@@ -65,7 +65,7 @@ const ProjectsSection = () => {
               className="text-black mb-1"
               aria-label="Toplam Bayrampaşa kentsel dönüşüm projesi sayısı"
             >
-              Toplam Bayrampaşa Kentsel Dönüşüm Projesi
+              Toplam İstanbul Kentsel Dönüşüm Projesi
             </h3>
             <h2 className="text-4xl font-bold mb-1">{projects}</h2>
           </div>

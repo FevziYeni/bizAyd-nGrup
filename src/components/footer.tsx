@@ -115,7 +115,7 @@ const Footer: React.FC = () => {
 
       {/* Alt Bilgi */}
       <div className="border-t border-gray-300 pt-4 text-center text-sm text-gray-700">
-        © {new Date().getFullYear()} Yeni RM İnşaat | Bayrampaşa, İstanbul. Kat
+        © {new Date().getFullYear()} BİZ AYDIN GRUP YAPI | İstanbul. Kat
         karşılığı ve kentsel dönüşüm projelerinde güvenle hizmet vermektedir.
         Tüm hakları saklıdır.
       </div>

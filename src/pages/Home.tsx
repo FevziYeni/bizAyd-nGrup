@@ -19,7 +19,7 @@ const Home: React.FC = () => {
         </title>
         <meta
           name="description"
-          content="Güngören / İstanbul’da kat karşılığı ve kentsel dönüşüm projelerinde öncü firma: Biz Aydın Grup İnşaat. 17 yıllık tecrübemizle güvenli, modern ve sürdürülebilir projeler sunuyoruz.
+          content="Güngören / İstanbul’da kat karşılığı ve kentsel dönüşüm projelerinde öncü firma: Biz Aydın Grup İnşaat. 40 yıllık tecrübemizle güvenli, modern ve sürdürülebilir projeler sunuyoruz.
 "
         />
         <meta
@@ -30,7 +30,7 @@ const Home: React.FC = () => {
         />
         <meta
           property="og:title"
-          content="Biz Aydın Grup İnşaat | Bayrampaşa Kat Karşılığı & Kentsel Dönüşüm"
+          content="Biz Aydın Grup İnşaat | İstanbul Kat Karşılığı & Kentsel Dönüşüm"
         />
         <meta
           property="og:description"
