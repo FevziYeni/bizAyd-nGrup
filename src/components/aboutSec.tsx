@@ -14,12 +14,13 @@ const AboutSection = () => {
             Hakkımızda
           </h1>
           <p className="py-8">
-            Güngören / İstanbul’da 40 yılı aşkın süredir faaliyet gösteren Yeni
-            RM İnşaat, kentsel dönüşüm ve kat karşılığı projelerde öncü bir
-            firma olarak birçok büyük ölçekli projeyi başarıyla tamamlamıştır.
-            Kaliteden ödün vermeyen anlayışımız ve sürdürülebilir yapı
-            yaklaşımımızla, yalnızca binalar değil; güven, memnuniyet ve uzun
-            ömürlü yaşam alanları inşa ediyoruz.
+            Biz Aydın İnşaat Mimarlık İstanbul’da faaliyet gösteren bir inşaat
+            firmasıdır. Konut inşaatı, kentsel dönüşüm, villa yapımı, anahtar
+            teslim projeler ve tadilat hizmetlerinde zamanında teslim, kaliteli
+            malzeme ve müşteri memnuniyeti işimizin temelini oluşturur.
+            Özellikle kentsel dönüşüm projelerinde sahip olduğumuz deneyimle
+            güvenilir çözümler sunuyoruz. Amacımız; estetik, sağlam ve işlevsel
+            yapılar inşa ederek yaşam alanlarına değer katmaktır.
           </p>
           <div className="mt-4 space-x-4">
             <button
