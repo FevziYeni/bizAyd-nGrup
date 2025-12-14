@@ -14,7 +14,7 @@ const ContactSection = () => {
             <div>
               <h2 className="text-lg font-semibold">Adres</h2>
               <p aria-label="Yeni RM İnşaat Bayrampaşa Ofisi Adresi">
-                İstanbul/Bayrampaşa’da yer alan ofisimiz, ulaşım açısından
+                Güngören / İstanbul’da yer alan ofisimiz, ulaşım açısından
                 oldukça elverişli.
               </p>
             </div>
@@ -24,7 +24,7 @@ const ContactSection = () => {
             </div>
             <div>
               <h2 className="text-lg font-semibold">E-posta</h2>
-              <p aria-label="E-posta Adresi">yenirminsaat@hotmail.com</p>
+              {/* <p aria-label="E-posta Adresi">yenirminsaat@hotmail.com</p> */}
             </div>
           </div>
           <div className="mt-6 space-x-4">

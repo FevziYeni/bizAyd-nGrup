@@ -36,7 +36,7 @@ const RiskChartSection = () => {
             Kentsel Dönüşüm Neden Şart?
           </h2>
           <p className="text-lg mb-6 text-white">
-            Bayrampaşa ve İstanbul’daki eski binalar, özellikle 20 yıl ve üzeri
+            Güngören / İstanbul’daki eski binalar, özellikle 20 yıl ve üzeri
             yapılar, deprem riski taşır. Kentsel dönüşüm ve kat karşılığı
             projeleri ile güvenli ve modern yaşam alanları oluşturmak mümkündür.
           </p>

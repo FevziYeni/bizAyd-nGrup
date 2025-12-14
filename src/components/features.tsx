@@ -25,7 +25,7 @@ const FeaturesSection = () => {
             %100 Müşteri Memnuniyeti
           </h3>
           <p className="text-sm">
-            Bayrampaşa ve İstanbul’daki kat karşılığı ve kentsel dönüşüm
+            Güngören / İstanbul’daki kat karşılığı ve kentsel dönüşüm
             projelerinde, müşteri memnuniyetini her zaman ön planda tutuyoruz.
           </p>
         </div>
@@ -64,7 +64,7 @@ const FeaturesSection = () => {
             Güvenilirlik ve Tecrübe
           </h3>
           <p className="text-sm">
-            17+ yıllık tecrübemizle Bayrampaşa ve İstanbul’da kentsel dönüşüm
+            17+ yıllık tecrübemizle Güngören / İstanbul’da kentsel dönüşüm
             projelerinde güvenilir bir müteahhit firması olarak çalışıyoruz.
           </p>
         </div>

@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
             BİZ AYDIN GRUP
           </h3>
           <p className="text-sm">
-            İstanbul/Bayrampaşa merkezli müteahhit firmamız, kat karşılığı ve
+            Güngören / İstanbul merkezli müteahhit firmamız, kat karşılığı ve
             kentsel dönüşüm projelerinde güvenle hizmet vermektedir.
           </p>
         </div>
@@ -82,14 +82,14 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <a
-                href="mailto:yenirminsaat@hotmail.com"
+                // href="mailto:yenirminsaat@hotmail.com"
                 className="hover:underline"
                 aria-label="E-posta"
               >
-                yenirminsaat@hotmail.com
+                {/* yenirminsaat@hotmail.com */}
               </a>
             </li>
-            <li>Bayrampaşa / İstanbul</li>
+            <li>Güngören / İstanbul</li>
           </ul>
         </div>
 

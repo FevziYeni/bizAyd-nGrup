@@ -14,8 +14,8 @@ const AboutSection = () => {
             Hakkımızda
           </h1>
           <p className="py-8">
-            Bayrampaşa ve İstanbul’da 17 yılı aşkın süredir faaliyet gösteren
-            Yeni RM İnşaat, kentsel dönüşüm ve kat karşılığı projelerde öncü bir
+            Güngören / İstanbul’da 17 yılı aşkın süredir faaliyet gösteren Yeni
+            RM İnşaat, kentsel dönüşüm ve kat karşılığı projelerde öncü bir
             firma olarak birçok büyük ölçekli projeyi başarıyla tamamlamıştır.
             Kaliteden ödün vermeyen anlayışımız ve sürdürülebilir yapı
             yaklaşımımızla, yalnızca binalar değil; güven, memnuniyet ve uzun

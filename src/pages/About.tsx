@@ -24,32 +24,13 @@ const AboutPage: React.FC = () => {
 
         <div className="max-w-4xl mx-auto space-y-6 text-lg md:text-xl leading-relaxed text-black">
           <p>
-            Sahip olduğumuz deneyim, geleceğin yapılarını inşa ediyor. Firmamız,
-            17 yılı aşkın süredir inşaat ve müteahhitlik sektöründe güvenin,
-            kalitenin ve sürdürülebilirliğin temsilcisi olmuştur.
-          </p>
-
-          <p>
-            Kurulduğumuz günden bu yana hem kamu hem de özel sektörde birçok
-            büyük ölçekli projeyi başarıyla hayata geçirerek güçlü bir referans
-            ağı oluşturduk. Yüksek mühendislik standartları, iş güvenliğine
-            verdiğimiz önem ve detaylara gösterdiğimiz özen ile projelerimizi
-            zamanında ve eksiksiz teslim ediyoruz.
-          </p>
-
-          <p>
-            Her projemizi sadece teknik bir süreç olarak değil, bir vizyonun
-            hayata geçmesi olarak görüyoruz. Bu nedenle, işimizi sadece
-            tamamlamakla kalmıyor; bulunduğumuz bölgelere katma değer sağlamayı,
-            çevreye duyarlı çözümler üretmeyi ve estetik ile fonksiyonelliği bir
-            araya getirmeyi amaçlıyoruz.
-          </p>
-
-          <p>
-            Bugüne kadar edindiğimiz bilgi birikimi ve deneyimle, geleceğe daha
-            güçlü adımlarla ilerliyoruz. Kaliteli, güvenli ve uzun ömürlü yaşam
-            alanları inşa etme misyonumuzla müşterilerimizin memnuniyetini ön
-            planda tutuyoruz.
+            Biz Aydın İnşaat Mimarlık İstanbul’da faaliyet gösteren bir inşaat
+            firmasıdır. Konut inşaatı, kentsel dönüşüm, villa yapımı, anahtar
+            teslim projeler ve tadilat hizmetlerinde zamanında teslim, kaliteli
+            malzeme ve müşteri memnuniyeti işimizin temelini oluşturur.
+            Özellikle kentsel dönüşüm projelerinde sahip olduğumuz deneyimle
+            güvenilir çözümler sunuyoruz. Amacımız; estetik, sağlam ve işlevsel
+            yapılar inşa ederek yaşam alanlarına değer katmaktır.
           </p>
         </div>
       </AnimatedSection>

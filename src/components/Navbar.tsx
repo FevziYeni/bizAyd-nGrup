@@ -72,11 +72,11 @@ const Navbar: React.FC = () => {
                 className="flex flex-col leading-tight cursor-pointer"
                 onClick={() => handleNavigate("/")}
               >
-                <span className="text-2xl font-bold bg-gradient-to-r text-blue-900 bg-clip-text ">
-                  BİZ AYDIN
+                <span className="text-2xl font-bold bg-gradient-to-r text-gold bg-clip-text ">
+                  BİZ AYDIN GRUP
                 </span>
-                <span className="text-sm font-bold bg-gradient-to-r text-gold bg-clip-text tracking-wider">
-                  GRUP
+                <span className="text-sm font-bold bg-gradient-to-r text-blue-950 bg-clip-text tracking-wider">
+                  YAPI
                 </span>
               </div>
             </div>

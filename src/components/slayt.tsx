@@ -37,7 +37,7 @@ const HeroSection = () => {
 
         <AnimatedSection>
           <p className="text-lg mt-4 text-white">
-            Bayrampaşa ve İstanbul’da güvenli kat karşılığı ve kentsel dönüşüm
+            Güngören / İstanbul’da güvenli kat karşılığı ve kentsel dönüşüm
             projelerimizi keşfedin.
           </p>
         </AnimatedSection>

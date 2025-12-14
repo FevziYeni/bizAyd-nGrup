@@ -51,7 +51,7 @@ const ProjectsSection = () => {
       <section
         ref={ref}
         className="w-full bg-gradient-to-r from-white via-blue-900 to-white text-transparent text-black py-10"
-        aria-label="Bayrampaşa ve İstanbul Kentsel Dönüşüm Projeleri İstatistikleri"
+        aria-label="Güngören / İstanbul Kentsel Dönüşüm Projeleri İstatistikleri"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center items-center text-black">
           <div className="flex flex-col items-center justify-center">
@@ -95,7 +95,7 @@ const ProjectsSection = () => {
             />
             <h3
               className="text-base mb-1"
-              aria-label="Bayrampaşa ve İstanbul kentsel dönüşüm ekibi"
+              aria-label="Güngören / İstanbul kentsel dönüşüm ekibi"
             >
               Kat Karşılığı ve Kentsel Dönüşüm Ekibi
             </h3>

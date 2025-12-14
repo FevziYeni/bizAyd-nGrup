@@ -19,7 +19,7 @@ const Home: React.FC = () => {
         </title>
         <meta
           name="description"
-          content="Bayrampaşa ve İstanbul’da kat karşılığı ve kentsel dönüşüm projelerinde öncü firma: Biz Aydın Grup İnşaat. 17 yıllık tecrübemizle güvenli, modern ve sürdürülebilir projeler sunuyoruz.
+          content="Güngören / İstanbul’da kat karşılığı ve kentsel dönüşüm projelerinde öncü firma: Biz Aydın Grup İnşaat. 17 yıllık tecrübemizle güvenli, modern ve sürdürülebilir projeler sunuyoruz.
 "
         />
         <meta
@@ -34,7 +34,7 @@ const Home: React.FC = () => {
         />
         <meta
           property="og:description"
-          content="Bayrampaşa ve İstanbul’da güvenilir kat karşılığı ve kentsel dönüşüm projeleri sunan Biz Aydın Grup İnşaat ile arsanızı kazanca dönüştürün."
+          content="Güngören / İstanbul’da güvenilir kat karşılığı ve kentsel dönüşüm projeleri sunan Biz Aydın Grup İnşaat ile arsanızı kazanca dönüştürün."
         />
         <meta property="og:image" content="/og-image.jpg" />
         <meta property="og:url" content="https://www.yenirm.com" />

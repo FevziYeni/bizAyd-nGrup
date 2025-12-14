@@ -5,15 +5,15 @@ import Yeni from "../assets/görsel.jpeg";
 import Insaat from "../assets/insaat.jpg";
 import ürgüpLü from "../assets/projects/ürgüplü.jpg";
 import AnimatedSection from "./animatedSection";
-import image1 from "../assets/projects/iskom1.jpg";
+import güngören from "../assets/projects/güngörenProje.jpeg";
 import image2 from "../assets/projects/iskom2.jpg";
 import image3 from "../assets/projects/iskom3.jpg";
 import image4 from "../assets/projects/iskom4.jpg";
 import image5 from "../assets/projects/iskom5.jpg";
-import kagıthane from "../assets/projects/kagıthane.jpg";
+import kartal from "../assets/projects/KartalProje.jpeg";
 import kagıthane1 from "../assets/projects/kagıthane1.jpg";
 import kagıthane2 from "../assets/projects/kagıthane2.jpg";
-import ürgüplü from "../assets/projects/ürgüplü.jpg";
+import park from "../assets/projects/AydınParkEvleri.jpeg";
 import { Card } from "./ui/Card";
 import {
   Carousel,
@@ -25,25 +25,23 @@ import {
 
 const projects = [
   {
-    title: "Ürgüplü Projesi",
-    description: "Bayrampaşa’da kat karşılığı toplumsal konut projesi.",
-    images: [ürgüplü],
+    title: "Aydın Park Evleri Projesi",
+    description: "",
+    images: [park],
   },
   {
     id: 3,
     title: "Kağıthane Yaşam Evleri",
-    description:
-      "İstanbul Kağıthane’de güvenli ve modern kentsel dönüşüm projeleri.",
+    description: "",
     date: "2019-01-01",
-    images: [kagıthane, kagıthane1, kagıthane2],
+    images: [kartal],
   },
   {
     id: 1,
-    title: "İSKOM – İstanbul Su Kontrol ve Otomasyon Merkezi (Ortak Projeler)",
-    description:
-      "Büyük ölçekli su kontrol ve otomasyon tesisi projeleri. Kat karşılığı ve kentsel dönüşüm alanında referanslarımızdandır.",
+    title: "İstanbul/Güngören",
+    description: "",
     date: "2019-01-01",
-    images: [image1, image2, image3, image4, image5],
+    images: [güngören],
   },
 ];
 
@@ -80,14 +78,14 @@ const ProjectCardsSection = () => {
                       src={img}
                       alt={`${project.title} Görsel ${
                         idx + 1
-                      } - Bayrampaşa ve İstanbul Kentsel Dönüşüm`}
+                      } - Güngören / İstanbul Kentsel Dönüşüm`}
                       className="w-full h-[300px] object-cover rounded-lg cursor-pointer"
                       onClick={() =>
                         openModal(
                           img,
                           `${project.title} Görsel ${
                             idx + 1
-                          } - Bayrampaşa ve İstanbul Kentsel Dönüşüm`
+                          } - Güngören / İstanbul Kentsel Dönüşüm`
                         )
                       }
                     />
@@ -103,8 +101,10 @@ const ProjectCardsSection = () => {
             </Carousel>
 
             <div className="pt-4 text-left">
-              <h2 className="text-lg font-semibold">{project.title}</h2>
-              <p className="text-base text-white/90">{project.description}</p>
+              <h2 className="text-lg font-semibold  text-blue-900">
+                {project.title}
+              </h2>
+              <p className="text-base text-black">{project.description}</p>
             </div>
           </Card>
         ))}
@@ -136,7 +136,7 @@ const ProjectCardsSection = () => {
       <div className="flex justify-center mt-4">
         <button
           onClick={() => navigate("/projects")}
-          aria-label="Bayrampaşa ve İstanbul Kentsel Dönüşüm Projelerimizi Görüntüle"
+          aria-label="Güngören / İstanbul Kentsel Dönüşüm Projelerimizi Görüntüle"
           className="inline-block py-4 bg-black text-white text-lg font-semibold rounded-lg hover:bg-white hover:text-black transition-colors duration-300 shadow-lg w-full md:w-2/3 text-center"
         >
           Projelerimiz
