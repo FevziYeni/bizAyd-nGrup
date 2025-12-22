@@ -12,8 +12,13 @@ import {
 /* === IMAGES === */
 
 import park from "../assets/projects/AydınParkEvleri.jpeg";
+import park1 from "../assets/projects/aydınparkEvleri2.jpeg";
 import kartal from "../assets/projects/KartalProje.jpeg";
+import kartal1 from "../assets/projects/kartalProje1.jpeg";
+import kartal2 from "../assets/projects/kartalProje2.jpeg";
 import güngören from "../assets/projects/güngörenProje.jpeg";
+import tekirdag from "../assets/projects/tekirdagProje.jpeg";
+import zeytinburnu from "../assets/projects/ZeytinburnuProje.jpeg";
 
 /* === DATA === */
 const ourProjects = [
@@ -21,19 +26,31 @@ const ourProjects = [
     id: 1,
     title: "Aydın Park Projesi",
     description: "Toplumsal Proje",
-    images: [park],
+    images: [park, park1],
   },
   {
     id: 2,
     title: "İstanbul / Kartal",
     description: "Toplumsal Konut",
-    images: [kartal],
+    images: [kartal, kartal1, kartal2],
   },
   {
     id: 3,
     title: "İstanbul / Güngören",
     description: "Toplumsal Konut",
     images: [güngören],
+  },
+  {
+    id: 4,
+    title: "Tekirdağ Projesi",
+    description: "Toplumsal Konut",
+    images: [tekirdag],
+  },
+  {
+    id: 5,
+    title: "Tekirdağ Projesi",
+    description: "Toplumsal Konut",
+    images: [zeytinburnu],
   },
 ];
 

@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import Yeni from "../assets/görsel.jpeg";
-import Insaat from "../assets/insaat.jpg";
-import ürgüpLü from "../assets/projects/ürgüplü.jpg";
 import AnimatedSection from "./animatedSection";
-import güngören from "../assets/projects/güngörenProje.jpeg";
-import image2 from "../assets/projects/iskom2.jpg";
-import image3 from "../assets/projects/iskom3.jpg";
-import image4 from "../assets/projects/iskom4.jpg";
-import image5 from "../assets/projects/iskom5.jpg";
-import kartal from "../assets/projects/KartalProje.jpeg";
-import kagıthane1 from "../assets/projects/kagıthane1.jpg";
-import kagıthane2 from "../assets/projects/kagıthane2.jpg";
 import park from "../assets/projects/AydınParkEvleri.jpeg";
+import park1 from "../assets/projects/aydınparkEvleri2.jpeg";
+import kartal from "../assets/projects/KartalProje.jpeg";
+import kartal1 from "../assets/projects/kartalProje1.jpeg";
+import kartal2 from "../assets/projects/kartalProje2.jpeg";
+import güngören from "../assets/projects/güngörenProje.jpeg";
+
 import { Card } from "./ui/Card";
 import {
   Carousel,
@@ -27,14 +22,14 @@ const projects = [
   {
     title: "Aydın Park Evleri Projesi",
     description: "",
-    images: [park],
+    images: [park, park1],
   },
   {
     id: 3,
     title: "İstanbul/Kartal Projesi",
     description: "",
     date: "2019-01-01",
-    images: [kartal],
+    images: [kartal, kartal1, kartal2],
   },
   {
     id: 1,
