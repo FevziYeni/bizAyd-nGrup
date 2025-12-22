@@ -4,9 +4,11 @@ import { useNavigate } from "react-router-dom";
 import AnimatedSection from "./animatedSection";
 import park from "../assets/projects/AydınParkEvleri.jpeg";
 import park1 from "../assets/projects/aydınparkEvleri2.jpeg";
+import park2 from "../assets/projects/aydınParkEvleri4.jpg";
 import kartal from "../assets/projects/KartalProje.jpeg";
 import kartal1 from "../assets/projects/kartalProje1.jpeg";
 import kartal2 from "../assets/projects/kartalProje2.jpeg";
+import kartal3 from "../assets/projects/kartalProje3.jpeg";
 import güngören from "../assets/projects/güngörenProje.jpeg";
 
 import { Card } from "./ui/Card";
@@ -22,14 +24,14 @@ const projects = [
   {
     title: "Aydın Park Evleri Projesi",
     description: "",
-    images: [park, park1],
+    images: [park2, park, park1],
   },
   {
     id: 3,
     title: "İstanbul/Kartal Projesi",
     description: "",
     date: "2019-01-01",
-    images: [kartal, kartal1, kartal2],
+    images: [kartal, kartal1, kartal2, kartal3],
   },
   {
     id: 1,

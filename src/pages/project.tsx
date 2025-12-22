@@ -13,12 +13,17 @@ import {
 
 import park from "../assets/projects/AydınParkEvleri.jpeg";
 import park1 from "../assets/projects/aydınparkEvleri2.jpeg";
+import park2 from "../assets/projects/aydınParkEvleri4.jpg";
+import park3 from "../assets/projects/aydınKartal3.jpg";
+
 import kartal from "../assets/projects/KartalProje.jpeg";
 import kartal1 from "../assets/projects/kartalProje1.jpeg";
 import kartal2 from "../assets/projects/kartalProje2.jpeg";
+import kartal3 from "../assets/projects/kartalProje3.jpeg";
 import güngören from "../assets/projects/güngörenProje.jpeg";
 import tekirdag from "../assets/projects/tekirdagProje.jpeg";
 import zeytinburnu from "../assets/projects/ZeytinburnuProje.jpeg";
+import bahcelievler from "../assets/projects/bahceliEvler.jpg";
 
 /* === DATA === */
 const ourProjects = [
@@ -26,13 +31,13 @@ const ourProjects = [
     id: 1,
     title: "Aydın Park Projesi",
     description: "Toplumsal Proje",
-    images: [park, park1],
+    images: [park2, park3, park, park1],
   },
   {
     id: 2,
     title: "İstanbul / Kartal",
     description: "Toplumsal Konut",
-    images: [kartal, kartal1, kartal2],
+    images: [kartal, kartal1, kartal2, kartal3],
   },
   {
     id: 3,
@@ -51,6 +56,12 @@ const ourProjects = [
     title: "Tekirdağ Projesi",
     description: "Toplumsal Konut",
     images: [zeytinburnu],
+  },
+  {
+    id: 6,
+    title: "İstanbul / Bahçelievler",
+    description: "Toplumsal Konut",
+    images: [bahcelievler],
   },
 ];
 
