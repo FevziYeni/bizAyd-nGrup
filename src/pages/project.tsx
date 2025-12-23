@@ -53,7 +53,7 @@ const ourProjects = [
   },
   {
     id: 5,
-    title: "Tekirdağ Projesi",
+    title: "Zeytinburnu Projesi",
     description: "Toplumsal Konut",
     images: [zeytinburnu],
   },
