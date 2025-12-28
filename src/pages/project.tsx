@@ -21,6 +21,7 @@ import kartal1 from "../assets/projects/kartalProje1.jpeg";
 import kartal2 from "../assets/projects/kartalProje2.jpeg";
 import kartal3 from "../assets/projects/kartalProje3.jpeg";
 import güngören from "../assets/projects/güngörenProje.jpeg";
+import güngören1 from "../assets/projects/güngörenProje.jpg";
 import tekirdag from "../assets/projects/tekirdagProje.jpeg";
 import zeytinburnu from "../assets/projects/ZeytinburnuProje.jpeg";
 import bahcelievler from "../assets/projects/bahceliEvler.jpg";
@@ -43,7 +44,7 @@ const ourProjects = [
     id: 3,
     title: "İstanbul / Güngören",
     description: "Toplumsal Konut",
-    images: [güngören],
+    images: [güngören, güngören1],
   },
   {
     id: 4,

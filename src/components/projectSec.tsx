@@ -10,6 +10,7 @@ import kartal1 from "../assets/projects/kartalProje1.jpeg";
 import kartal2 from "../assets/projects/kartalProje2.jpeg";
 import kartal3 from "../assets/projects/kartalProje3.jpeg";
 import güngören from "../assets/projects/güngörenProje.jpeg";
+import güngören1 from "../assets/projects/güngörenProje.jpg";
 
 import { Card } from "./ui/Card";
 import {
@@ -38,7 +39,7 @@ const projects = [
     title: "İstanbul/Güngören",
     description: "",
     date: "2019-01-01",
-    images: [güngören],
+    images: [güngören, güngören1],
   },
 ];
 
