@@ -22,8 +22,9 @@ const ScrollToTopButton: React.FC = () => {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 w-20 p-3 rounded-full bg-yellow-400 text-black shadow-lg hover:bg-yellow-500 transition z-50"
-      aria-label="Scroll to top"
+      className="fixed bottom-5 left-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-gold text-black shadow-lg transition hover:-translate-y-0.5 hover:bg-yellow-300 hover:shadow-xl"
+      aria-label="Sayfanın en üstüne çık"
+      title="Yukarı çık"
     >
       <FontAwesomeIcon icon={faArrowUp} />
     </button>

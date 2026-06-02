@@ -1,35 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagram,
-  faTwitter,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
 import AnimatedSection from "./animatedSection";
+import { siteConfig } from "../config/site";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
-    <AnimatedSection className="bg-gradient-to-r from-white via-blue-900 to-white text-black px-6 pt-8 pb-8">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-        {/* Şirket Bilgisi */}
+    <AnimatedSection className="bg-blue-950 px-6 pb-8 pt-12 text-white">
+      <div className="mx-auto mb-8 grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-4">
         <div>
-          <h3 className="text-xl font-bold mb-3 text-yellow-500">
-            BİZ AYDIN GRUP
+          <h3 className="text-xl font-bold mb-3 text-gold">
+            {siteConfig.brandName.toUpperCase()}
           </h3>
-          <p className="text-sm">
-            Güngören / İstanbul merkezli müteahhit firmamız, kat karşılığı ve
-            kentsel dönüşüm projelerinde güvenle hizmet vermektedir.
+          <p className="text-sm leading-6 text-white/70">
+            İstanbul merkezli yapı firmamız, kat karşılığı ve kentsel dönüşüm
+            projelerinde güven, kalite ve şeffaf süreç yönetimiyle hizmet verir.
           </p>
         </div>
 
-        {/* Sayfalar */}
         <div>
-          <h4 className="text-lg font-semibold mb-2 text-yellow-500">
+          <h4 className="text-lg font-semibold mb-2 text-gold">
             Sayfalar
           </h4>
-          <ul className="space-y-1 text-sm">
+          <ul className="space-y-2 text-sm text-white/75">
             <li>
               <Link to="/" className="hover:underline" aria-label="Anasayfa">
                 Anasayfa
@@ -37,7 +30,7 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <Link
-                to="/projeler"
+                to="/projects"
                 className="hover:underline"
                 aria-label="Projelerimiz"
               >
@@ -46,7 +39,7 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <Link
-                to="/hakkimizda"
+                to="/about"
                 className="hover:underline"
                 aria-label="Hakkımızda"
               >
@@ -55,7 +48,7 @@ const Footer: React.FC = () => {
             </li>
             <li>
               <Link
-                to="/iletisim"
+                to="/contact"
                 className="hover:underline"
                 aria-label="İletişim"
               >
@@ -65,57 +58,65 @@ const Footer: React.FC = () => {
           </ul>
         </div>
 
-        {/* İletişim Bilgileri */}
         <div>
-          <h4 className="text-lg font-semibold mb-2 text-yellow-500">
+          <h4 className="text-lg font-semibold mb-2 text-gold">
             İletişim
           </h4>
-          <ul className="space-y-1 text-sm">
+          <ul className="space-y-2 text-sm text-white/75">
             <li>
               <a
-                href="tel:+905323322960"
-                className="hover:underline"
+                href={`tel:${siteConfig.phoneHref}`}
+                className="inline-flex items-center gap-2 hover:underline"
                 aria-label="Telefon"
               >
-                +90 (532) 405 46 77
+                <Phone size={15} aria-hidden="true" />
+                {siteConfig.phoneDisplay}
               </a>
             </li>
             <li>
               <a
-                // href="mailto:yenirminsaat@hotmail.com"
-                className="hover:underline"
+                href={`mailto:${siteConfig.email}`}
+                className="inline-flex items-center gap-2 hover:underline"
                 aria-label="E-posta"
               >
-                {/* yenirminsaat@hotmail.com */}
+                <Mail size={15} aria-hidden="true" />
+                {siteConfig.email}
               </a>
             </li>
-            <li>Güngören / İstanbul</li>
+            <li className="inline-flex items-center gap-2">
+              <MapPin size={15} aria-hidden="true" />
+              {siteConfig.address}
+            </li>
           </ul>
         </div>
 
-        {/* Sosyal Medya */}
         <div>
-          <h4 className="text-lg font-semibold mb-2">Bizi Takip Edin</h4>
-          <div className="flex space-x-4 text-xl text-gray-800">
-            <a href="#" aria-label="Facebook" className="hover:text-blue-600">
-              <FontAwesomeIcon icon={faFacebook} />
+          <h4 className="text-lg font-semibold mb-2 text-gold">
+            Hızlı Ulaşım
+          </h4>
+          <div className="flex flex-col gap-2 text-sm text-white/75">
+            <a
+              href={siteConfig.whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 hover:underline"
+            >
+              <MessageCircle size={16} aria-hidden="true" />
+              WhatsApp ile yazın
             </a>
-            <a href="#" aria-label="Instagram" className="hover:text-pink-600">
-              <FontAwesomeIcon icon={faInstagram} />
-            </a>
-            <a href="#" aria-label="Twitter" className="hover:text-blue-400">
-              <FontAwesomeIcon icon={faTwitter} />
-            </a>
-            <a href="#" aria-label="Github" className="hover:text-black">
-              <FontAwesomeIcon icon={faGithub} />
+            <a
+              href={`mailto:${siteConfig.email}`}
+              className="inline-flex items-center gap-2 hover:underline"
+            >
+              <Mail size={16} aria-hidden="true" />
+              Teklif talebi gönderin
             </a>
           </div>
         </div>
       </div>
 
-      {/* Alt Bilgi */}
-      <div className="border-t border-gray-300 pt-4 text-center text-sm text-gray-700">
-        © {new Date().getFullYear()} BİZ AYDIN GRUP YAPI | İstanbul. Kat
+      <div className="mx-auto max-w-7xl border-t border-white/15 pt-5 text-center text-sm text-white/60">
+        © {new Date().getFullYear()} BİZ AYDIN GRUP | İstanbul. Kat
         karşılığı ve kentsel dönüşüm projelerinde güvenle hizmet vermektedir.
         Tüm hakları saklıdır.
       </div>

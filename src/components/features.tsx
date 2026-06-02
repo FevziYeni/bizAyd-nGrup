@@ -1,72 +1,50 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faSmile,
-  faBolt,
-  faShieldAlt,
-} from "@fortawesome/free-solid-svg-icons";
 import AnimatedSection from "./animatedSection";
+import { Clock3, Handshake, ShieldCheck } from "lucide-react";
+
+const features = [
+  {
+    icon: Handshake,
+    title: "Memnuniyet Odaklı Süreç",
+    text: "Kat karşılığı ve kentsel dönüşüm projelerinde beklentileri netleştirir, süreci anlaşılır şekilde yönetiriz.",
+  },
+  {
+    icon: Clock3,
+    title: "Zamanında Teslim",
+    text: "Planlama, saha koordinasyonu ve tedarik adımlarını proje takvimine uygun ilerletmeye odaklanırız.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Güvenilirlik ve Tecrübe",
+    text: "40+ yıllık tecrübemizle güvenli, kaliteli ve uzun ömürlü yaşam alanları üretiriz.",
+  },
+];
 
 const FeaturesSection = () => {
   return (
-    <AnimatedSection className="py-10 text-black bg-gradient-to-r from-white via-blue-900 to-white px-0 rounded-md">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-        <div className="flex flex-col items-center justify-center px-4">
-          <FontAwesomeIcon
-            icon={faSmile}
-            size="2x"
-            className="text-yellow-400 mb-2"
-            aria-hidden="true"
-          />
-          <h3
-            className="text-lg font-semibold mb-1"
-            aria-label="Müşteri memnuniyeti Bayrampaşa kentsel dönüşüm"
-          >
-            %100 Müşteri Memnuniyeti
-          </h3>
-          <p className="text-sm">
-            Güngören / İstanbul’daki kat karşılığı ve kentsel dönüşüm
-            projelerinde, müşteri memnuniyetini her zaman ön planda tutuyoruz.
+    <AnimatedSection className="bg-white/58 px-6 py-20 text-slate-950 backdrop-blur-[1px]">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-10 max-w-3xl">
+          <p className="text-sm font-bold uppercase text-gold">
+            Neden Biz?
           </p>
+          <h2 className="mt-3 text-4xl font-extrabold text-blue-950 md:text-5xl">
+            Güven, planlama ve kaliteyi aynı süreçte buluşturuyoruz.
+          </h2>
         </div>
-
-        <div className="flex flex-col items-center justify-center px-4">
-          <FontAwesomeIcon
-            icon={faBolt}
-            size="2x"
-            className="text-yellow-400 mb-2"
-            aria-hidden="true"
-          />
-          <h3
-            className="text-lg font-semibold mb-1"
-            aria-label="Hızlı teslimat ve proje süresi"
-          >
-            Hızlı ve Zamanında Teslimat
-          </h3>
-          <p className="text-sm">
-            Projelerimizi, İstanbul’daki kentsel dönüşüm ve toplu konut
-            projelerinde belirlenen zaman çizelgesine uygun şekilde hızlı ve
-            kaliteli olarak tamamlıyoruz.
-          </p>
-        </div>
-
-        <div className="flex flex-col items-center justify-center px-4">
-          <FontAwesomeIcon
-            icon={faShieldAlt}
-            size="2x"
-            className="text-yellow-400 mb-2"
-            aria-hidden="true"
-          />
-          <h3
-            className="text-lg font-semibold mb-1"
-            aria-label="Güvenilir müteahhit ve inşaat firması"
-          >
-            Güvenilirlik ve Tecrübe
-          </h3>
-          <p className="text-sm">
-            40+ yıllık tecrübemizle Güngören / İstanbul’da kentsel dönüşüm
-            projelerinde güvenilir bir müteahhit firması olarak çalışıyoruz.
-          </p>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {features.map(({ icon: Icon, title, text }) => (
+            <article
+              key={title}
+              className="rounded-lg border border-slate-300 bg-white/90 p-6 shadow-lg shadow-slate-900/10"
+            >
+              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-md bg-blue-950 text-gold">
+                <Icon size={24} aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-bold text-blue-950">{title}</h3>
+              <p className="mt-3 leading-7 text-slate-700">{text}</p>
+            </article>
+          ))}
         </div>
       </div>
     </AnimatedSection>

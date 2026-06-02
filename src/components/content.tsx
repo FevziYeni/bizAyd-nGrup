@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBriefcase,
-  faBuilding,
-  faUsers,
-} from "@fortawesome/free-solid-svg-icons";
 import { useInView } from "react-intersection-observer";
 import AnimatedSection from "./animatedSection";
+import { BriefcaseBusiness, Building2, Users } from "lucide-react";
 
 const ProjectsSection = () => {
   const [projects, setProjects] = useState(0);
@@ -47,59 +42,50 @@ const ProjectsSection = () => {
   }, [inView]);
 
   return (
-    <AnimatedSection className="mx-auto py-20">
+    <AnimatedSection className="bg-white/45 px-6 py-14 backdrop-blur-[1px]">
       <section
         ref={ref}
-        className="w-full bg-gradient-to-r from-white via-blue-900 to-white text-transparent text-black py-10"
+        className="mx-auto max-w-7xl overflow-hidden rounded-lg border border-slate-300 bg-white/95 shadow-xl shadow-slate-900/10"
         aria-label="Güngören / İstanbul Kentsel Dönüşüm Projeleri İstatistikleri"
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center items-center text-black">
-          <div className="flex flex-col items-center justify-center">
-            <FontAwesomeIcon
-              icon={faBuilding}
-              size="2x"
-              className="text-yellow-600 mb-2"
-              aria-hidden="true"
-            />
+        <div className="grid grid-cols-1 divide-y divide-slate-200 text-center md:grid-cols-3 md:divide-x md:divide-y-0">
+          <div className="flex flex-col items-center justify-center p-8">
+            <Building2 className="mb-3 text-gold" size={30} aria-hidden="true" />
             <h3
-              className="text-black mb-1"
-              aria-label="Toplam Bayrampaşa kentsel dönüşüm projesi sayısı"
+              className="mb-2 text-sm font-semibold text-slate-600"
+              aria-label="Toplam İstanbul kentsel dönüşüm projesi sayısı"
             >
-              Toplam İstanbul Kentsel Dönüşüm Projesi
+              İstanbul Kentsel Dönüşüm Projesi
             </h3>
-            <h2 className="text-4xl font-bold mb-1">{projects}</h2>
+            <h2 className="text-5xl font-extrabold text-blue-950">{projects}+</h2>
           </div>
 
-          <div className="flex flex-col items-center justify-center">
-            <FontAwesomeIcon
-              icon={faBriefcase}
-              size="2x"
-              className="text-yellow-600 mb-2"
+          <div className="flex flex-col items-center justify-center p-8">
+            <BriefcaseBusiness
+              className="mb-3 text-gold"
+              size={30}
               aria-hidden="true"
             />
             <h3
-              className="text-base mb-1"
-              aria-label="Yeni RM İnşaat tecrübe yılı"
+              className="mb-2 text-sm font-semibold text-slate-600"
+              aria-label="Biz Aydın Grup tecrübe yılı"
             >
-              İstanbul’da Güvenli İnşaat Tecrübesi
+              Güvenli İnşaat Tecrübesi
             </h3>
-            <h2 className="text-4xl font-bold mb-1">{experience} Yıl</h2>
+            <h2 className="text-5xl font-extrabold text-blue-950">
+              {experience} Yıl
+            </h2>
           </div>
 
-          <div className="flex flex-col items-center justify-center">
-            <FontAwesomeIcon
-              icon={faUsers}
-              size="2x"
-              className="text-yellow-600 mb-2"
-              aria-hidden="true"
-            />
+          <div className="flex flex-col items-center justify-center p-8">
+            <Users className="mb-3 text-gold" size={30} aria-hidden="true" />
             <h3
-              className="text-base mb-1"
+              className="mb-2 text-sm font-semibold text-slate-600"
               aria-label="Güngören / İstanbul kentsel dönüşüm ekibi"
             >
               Kat Karşılığı ve Kentsel Dönüşüm Ekibi
             </h3>
-            <h2 className="text-4xl font-bold mb-1">{team}</h2>
+            <h2 className="text-5xl font-extrabold text-blue-950">{team}</h2>
           </div>
         </div>
       </section>

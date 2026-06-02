@@ -24,20 +24,20 @@ import {
 const projects = [
   {
     title: "Aydın Park Evleri Projesi",
-    description: "",
+    description: "Modern yaşam alanlarıyla tamamlanan konut projesi.",
     images: [park2, park, park1],
   },
   {
     id: 3,
     title: "İstanbul/Kartal Projesi",
-    description: "",
+    description: "İstanbul’da güvenli ve işlevsel konut uygulaması.",
     date: "2019-01-01",
     images: [kartal, kartal1, kartal2, kartal3],
   },
   {
     id: 1,
     title: "İstanbul/Güngören",
-    description: "",
+    description: "Kentsel dönüşüm odağında geliştirilen konut projesi.",
     date: "2019-01-01",
     images: [güngören, güngören1],
   },
@@ -59,15 +59,29 @@ const ProjectCardsSection = () => {
   };
 
   return (
-    <AnimatedSection className="p-8 py-20">
-      {/* Başlık */}
-      <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-white via-blue-950 to-white bg-clip-text text-transparent text-center pb-8">
-        Projelerimiz
-      </h1>
+    <AnimatedSection className="bg-white/62 px-6 py-20 backdrop-blur-[1px]">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-sm font-bold uppercase text-gold">
+              Seçili Projeler
+            </p>
+            <h1 className="mt-3 text-4xl font-extrabold text-blue-950 md:text-5xl">
+              Projelerimiz
+            </h1>
+          </div>
+          <p className="max-w-xl text-slate-700">
+            Tamamlanan konut ve yapı projelerimizden seçilen çalışmalarla
+            kalite, süreç ve uygulama anlayışımızı inceleyebilirsiniz.
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-white">
+      <div className="grid grid-cols-1 gap-7 md:grid-cols-3">
         {projects.map((project, i) => (
-          <Card className="rounded-lg" key={i}>
+          <Card
+            className="group overflow-hidden rounded-lg border border-slate-300 bg-white/95 p-3 shadow-xl shadow-slate-900/10 transition hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-900/15"
+            key={i}
+          >
             <Carousel className="w-full relative">
               <CarouselContent>
                 {project.images.map((img, idx) => (
@@ -77,7 +91,7 @@ const ProjectCardsSection = () => {
                       alt={`${project.title} Görsel ${
                         idx + 1
                       } - Güngören / İstanbul Kentsel Dönüşüm`}
-                      className="w-full h-[300px] object-cover rounded-lg cursor-pointer"
+                      className="h-[300px] w-full cursor-pointer rounded-md object-cover transition duration-500 group-hover:scale-[1.03]"
                       onClick={() =>
                         openModal(
                           img,
@@ -98,11 +112,13 @@ const ProjectCardsSection = () => {
               </CarouselNext>
             </Carousel>
 
-            <div className="pt-4 text-left">
-              <h2 className="text-lg font-semibold  text-blue-900">
+            <div className="p-3 text-left">
+              <h2 className="text-xl font-bold text-blue-950">
                 {project.title}
               </h2>
-              <p className="text-base text-black">{project.description}</p>
+              <p className="mt-2 text-sm leading-6 text-slate-700">
+                {project.description}
+              </p>
             </div>
           </Card>
         ))}
@@ -131,14 +147,15 @@ const ProjectCardsSection = () => {
       )}
 
       {/* Projelerimiz Butonu */}
-      <div className="flex justify-center mt-4">
+      <div className="mt-10 flex justify-center">
         <button
           onClick={() => navigate("/projects")}
           aria-label="Güngören / İstanbul Kentsel Dönüşüm Projelerimizi Görüntüle"
-          className="inline-block py-4 bg-black text-white text-lg font-semibold rounded-lg hover:bg-white hover:text-black transition-colors duration-300 shadow-lg w-full md:w-2/3 text-center"
+          className="inline-flex w-full items-center justify-center rounded-md bg-blue-950 px-6 py-4 text-lg font-semibold text-white shadow-lg transition hover:bg-gold hover:text-black md:w-auto"
         >
-          Projelerimiz
+          Tüm Projeleri Gör
         </button>
+      </div>
       </div>
     </AnimatedSection>
   );
