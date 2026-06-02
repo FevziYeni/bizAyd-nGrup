@@ -16,8 +16,8 @@ const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const minimumLoaderTime = 900;
-    const fallbackTime = 5000;
+    const minimumLoaderTime = 450;
+    const fallbackTime = 1500;
     const startedAt = Date.now();
     let finished = false;
     let releaseTimer: ReturnType<typeof setTimeout>;
@@ -31,16 +31,18 @@ const App: React.FC = () => {
       releaseTimer = setTimeout(() => setLoading(false), remaining);
     };
 
-    if (document.readyState === "complete") {
+    if (document.readyState !== "loading") {
       releaseLoader();
     } else {
-      window.addEventListener("load", releaseLoader, { once: true });
+      document.addEventListener("DOMContentLoaded", releaseLoader, {
+        once: true,
+      });
     }
 
     const fallbackTimer = setTimeout(releaseLoader, fallbackTime);
 
     return () => {
-      window.removeEventListener("load", releaseLoader);
+      document.removeEventListener("DOMContentLoaded", releaseLoader);
       clearTimeout(fallbackTimer);
       clearTimeout(releaseTimer);
     };
