@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -11,6 +16,16 @@ import FloatingContactButtons from "./components/FloatingContactButtons";
 import bgImage from "./assets/bgimage.jpg";
 import { HelmetProvider } from "react-helmet-async";
 import PageLoader from "./components/pageLoader";
+
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname]);
+
+  return null;
+};
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -48,8 +63,6 @@ const App: React.FC = () => {
     };
   }, []);
 
-  if (loading) return <PageLoader />;
-
   return (
     <HelmetProvider>
       <div className="relative min-h-screen w-full overflow-x-hidden bg-[#f7f7f2]">
@@ -64,6 +77,7 @@ const App: React.FC = () => {
         <div className="pointer-events-none fixed inset-0 z-0 bg-white/20" />
         <Router>
           <div className="relative z-10">
+            <ScrollToTop />
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
@@ -75,6 +89,7 @@ const App: React.FC = () => {
             <FloatingContactButtons />
           </div>
         </Router>
+        {loading && <PageLoader />}
       </div>
     </HelmetProvider>
   );

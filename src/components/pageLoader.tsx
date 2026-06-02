@@ -20,7 +20,7 @@ const PageLoader = () => {
 
   return (
     <div
-      className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-[#f7f7f2] px-6 text-slate-950"
+      className="pointer-events-none fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-[#f7f7f2] px-6 text-slate-950"
       role="status"
       aria-live="polite"
       aria-label="Sayfa yükleniyor"

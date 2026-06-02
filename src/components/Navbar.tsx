@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import LOGO from "../assets/LOGOK.jpg";
 import { Button } from "../components/ui/Button";
 import clsx from "clsx";
@@ -17,9 +17,15 @@ import {
 
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  useEffect(() => {
+    setShow(true);
+    setLastScrollY(0);
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
