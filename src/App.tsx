@@ -65,7 +65,7 @@ const App: React.FC = () => {
 
   return (
     <HelmetProvider>
-      <div className="relative min-h-screen w-full overflow-x-hidden bg-[#f7f7f2]">
+      <div className="relative min-h-screen w-full max-w-full bg-[#f7f7f2]">
         <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
           <img
             src={bgImage}
