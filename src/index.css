@@ -4,27 +4,34 @@
 
 html {
   width: 100%;
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: clip;
-}
-
-body {
-  width: 100%;
+  height: auto;
   min-height: 100%;
   margin: 0;
   padding: 0;
   overflow-x: clip;
   overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
+  overflow-y: visible;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 #root {
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: visible;
+  overflow: visible !important;
 }
 
 @supports not (overflow: clip) {
@@ -32,6 +39,13 @@ body {
   body {
     overflow-x: hidden;
   }
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 * {
