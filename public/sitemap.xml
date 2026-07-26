@@ -2,22 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://xn--bizaydngrup-4zb.com/</loc>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://xn--bizaydngrup-4zb.com/about</loc>
+    <loc>https://xn--bizaydngrup-4zb.com/istanbul-kentsel-donusum</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://xn--bizaydngrup-4zb.com/projects</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://xn--bizaydngrup-4zb.com/projeler/gungoren-akincilar-projesi</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://xn--bizaydngrup-4zb.com/projeler/aydin-park-evleri-projesi</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://xn--bizaydngrup-4zb.com/contact</loc>
+    <loc>https://xn--bizaydngrup-4zb.com/projeler/istanbul-kartal-konut-projesi</loc>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xn--bizaydngrup-4zb.com/projeler/istanbul-gungoren-konut-projesi</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xn--bizaydngrup-4zb.com/projeler/tekirdag-konut-projesi</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://xn--bizaydngrup-4zb.com/projeler/zeytinburnu-konut-projesi</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xn--bizaydngrup-4zb.com/projeler/istanbul-bahcelievler-konut-projesi</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xn--bizaydngrup-4zb.com/sikca-sorulan-sorular</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xn--bizaydngrup-4zb.com/about</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://xn--bizaydngrup-4zb.com/contact</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>

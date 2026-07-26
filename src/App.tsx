@@ -1,23 +1,30 @@
-import React, { useEffect, useState } from "react";
+import React, { lazy, Suspense, useEffect } from "react";
 import {
   BrowserRouter as Router,
+  Navigate,
   Route,
   Routes,
   useLocation,
 } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Project from "./pages/project";
 import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
 import FloatingContactButtons from "./components/FloatingContactButtons";
 
-import bgImage from "./assets/bgimage.jpg";
-import { HelmetProvider } from "react-helmet-async";
-import PageLoader from "./components/pageLoader";
+const About = lazy(() => import("./pages/About"));
+const Contact = lazy(() => import("./pages/Contact"));
+const Project = lazy(() => import("./pages/project"));
+const ProjectDetailPage = lazy(() => import("./pages/ProjectDetailPage"));
+const FaqPage = lazy(() => import("./pages/FaqPage"));
+const GungorenAkincilarProject = lazy(
+  () => import("./pages/GungorenAkincilarProject")
+);
+const IstanbulServicesPage = lazy(
+  () => import("./pages/IstanbulServicesPage")
+);
 
-const ScrollToTop = () => {
+const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -28,69 +35,48 @@ const ScrollToTop = () => {
 };
 
 const App: React.FC = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const minimumLoaderTime = 450;
-    const fallbackTime = 1500;
-    const startedAt = Date.now();
-    let finished = false;
-    let releaseTimer: ReturnType<typeof setTimeout>;
-
-    const releaseLoader = () => {
-      if (finished) return;
-      finished = true;
-
-      const elapsed = Date.now() - startedAt;
-      const remaining = Math.max(0, minimumLoaderTime - elapsed);
-      releaseTimer = setTimeout(() => setLoading(false), remaining);
-    };
-
-    if (document.readyState !== "loading") {
-      releaseLoader();
-    } else {
-      document.addEventListener("DOMContentLoaded", releaseLoader, {
-        once: true,
-      });
-    }
-
-    const fallbackTimer = setTimeout(releaseLoader, fallbackTime);
-
-    return () => {
-      document.removeEventListener("DOMContentLoaded", releaseLoader);
-      clearTimeout(fallbackTimer);
-      clearTimeout(releaseTimer);
-    };
-  }, []);
-
   return (
     <HelmetProvider>
-      <div className="relative min-h-screen w-full max-w-full bg-[#f7f7f2]">
-        <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
-          <img
-            src={bgImage}
-            alt=""
-            aria-hidden="true"
-            className="h-full w-full select-none object-cover opacity-70"
-          />
-        </div>
-        <div className="pointer-events-none fixed inset-0 z-0 bg-white/20" />
-        <Router>
-          <div className="relative z-10">
-            <ScrollToTop />
-            <Navbar />
+      <Router>
+        <div className="min-h-screen bg-[#f8f7f3] text-slate-950">
+          <ScrollToTop />
+          <Navbar />
+          <Suspense
+            fallback={
+              <div className="flex min-h-[55vh] items-center justify-center bg-[#f8f7f3]">
+                <span className="h-8 w-8 animate-spin rounded-full border-2 border-slate-200 border-t-gold" />
+                <span className="sr-only">Sayfa yükleniyor</span>
+              </div>
+            }
+          >
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/projects" element={<Project />} />
+              <Route
+                path="/istanbul-kentsel-donusum"
+                element={<IstanbulServicesPage />}
+              />
+              <Route
+                path="/projeler/gungoren-akincilar-projesi"
+                element={<GungorenAkincilarProject />}
+              />
+              <Route
+                path="/projeler/:projectSlug"
+                element={<ProjectDetailPage />}
+              />
+              <Route
+                path="/sikca-sorulan-sorular"
+                element={<FaqPage />}
+              />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
-            <Footer />
-            <FloatingContactButtons />
-          </div>
-        </Router>
-        {loading && <PageLoader />}
-      </div>
+          </Suspense>
+          <Footer />
+          <FloatingContactButtons />
+        </div>
+      </Router>
     </HelmetProvider>
   );
 };

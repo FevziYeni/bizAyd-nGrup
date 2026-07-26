@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://xn--bizaydngrup-4zb.com/sitemap.xml
+Host: xn--bizaydngrup-4zb.com

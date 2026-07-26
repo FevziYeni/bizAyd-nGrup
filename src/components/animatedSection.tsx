@@ -1,37 +1,12 @@
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import React, { PropsWithChildren } from "react";
 
-const AnimatedSection = ({ children, className = "" }: any) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true, // This ensures the animation only happens once
-    threshold: 0.1,
-  });
+interface AnimatedSectionProps extends PropsWithChildren {
+  className?: string;
+}
 
-  useEffect(() => {
-    if (inView) {
-      controls.start({
-        opacity: 1,
-        y: 0,
-        transition: {
-          duration: 1.5,
-          ease: "easeOut",
-        },
-      });
-    }
-  }, [controls, inView]);
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={controls}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-};
+const AnimatedSection: React.FC<AnimatedSectionProps> = ({
+  children,
+  className = "",
+}) => <div className={`deferred-section ${className}`}>{children}</div>;
 
 export default AnimatedSection;

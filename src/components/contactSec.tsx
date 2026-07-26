@@ -1,5 +1,5 @@
 import React from "react";
-import iletişim from "../assets/iletişim.jpg";
+import iletişim from "../assets/iletisim.webp";
 import AnimatedSection from "./animatedSection";
 import { siteConfig } from "../config/site";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
@@ -12,9 +12,9 @@ const ContactSection = () => {
           <p className="text-sm font-bold uppercase text-gold">
             İletişim
           </p>
-          <h1 className="mt-3 text-4xl font-extrabold md:text-5xl">
+          <h2 className="mt-3 text-4xl font-extrabold md:text-5xl">
             Projeniz için ilk adımı birlikte atalım.
-          </h1>
+          </h2>
           <p className="mt-5 leading-8 text-white/75">
             Kentsel dönüşüm, kat karşılığı proje veya konut inşaatı talepleriniz
             için bize telefon, WhatsApp veya e-posta üzerinden ulaşabilirsiniz.
@@ -84,7 +84,11 @@ const ContactSection = () => {
           <img
             src={iletişim}
             alt="Biz Aydın Grup iletişim görseli"
-            className="absolute inset-0 h-full w-full object-fill"
+            className="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
+            width={1600}
+            height={1050}
           />
         </div>
       </div>

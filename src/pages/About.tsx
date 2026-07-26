@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import AnimatedSection from "../components/animatedSection";
 import { siteConfig } from "../config/site";
-import aboutHero from "../assets/hakkımızda.jpg";
+import aboutHero from "../assets/hakkimizda.webp";
 import {
   ArrowRight,
   Building2,
@@ -51,10 +51,10 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Hakkımızda | Biz Aydın Grup</title>
+        <title>Aydın İnşaat Hakkımızda | Biz Aydın Grup İstanbul</title>
         <meta
           name="description"
-          content="Biz Aydın Grup, 40 yıllık tecrübesiyle İstanbul’da güvenli, kaliteli ve sürdürülebilir inşaat projeleri geliştirir."
+          content="Aydın İnşaat ve Biz Aydın Grup Yapı; 40+ yıllık tecrübesiyle İstanbul’da kentsel dönüşüm, kat karşılığı inşaat ve konut projeleri geliştirir."
         />
         <meta
           name="keywords"
@@ -128,6 +128,10 @@ const AboutPage: React.FC = () => {
                 src={aboutHero}
                 alt="Biz Aydın Grup kurumsal hakkımızda görseli"
                 className="h-full min-h-[420px] w-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width={1600}
+                height={1099}
               />
             </div>
 

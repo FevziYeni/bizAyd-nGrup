@@ -9,10 +9,10 @@ const ContactPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>İletişim | Biz Aydın Grup</title>
+        <title>Aydın İnşaat İletişim | İstanbul | Biz Aydın Grup</title>
         <meta
           name="description"
-          content="Biz Aydın Grup ile iletişime geçin. İstanbul’daki kentsel dönüşüm, kat karşılığı ve konut projeleriniz için telefon, WhatsApp, e-posta veya form üzerinden bize ulaşın."
+          content="Aydın İnşaat ve Güngören merkezli Biz Aydın Grup ile iletişime geçin. İstanbul kentsel dönüşüm, kat karşılığı ve konut projeniz için görüşün."
         />
         <meta
           name="keywords"

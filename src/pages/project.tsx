@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight, MapPin } from "lucide-react";
 import AnimatedSection from "../components/animatedSection";
 import { Card } from "../components/ui/Card";
 import { siteConfig } from "../config/site";
+import { ProjectRecord, projectRecords } from "../data/projects";
 import {
   Carousel,
   CarouselContent,
@@ -11,64 +14,6 @@ import {
   CarouselPrevious,
 } from "../components/ui/carousel";
 
-/* === IMAGES === */
-
-import park from "../assets/projects/AydınParkEvleri.jpeg";
-import park1 from "../assets/projects/aydınparkEvleri2.jpeg";
-import park2 from "../assets/projects/aydınParkEvleri4.jpg";
-import park3 from "../assets/projects/aydınKartal3.jpg";
-
-import kartal from "../assets/projects/KartalProje.jpeg";
-import kartal1 from "../assets/projects/kartalProje1.jpeg";
-import kartal2 from "../assets/projects/kartalProje2.jpeg";
-import kartal3 from "../assets/projects/kartalProje3.jpeg";
-import güngören from "../assets/projects/güngörenProje.jpeg";
-import güngören1 from "../assets/projects/güngörenProje.jpg";
-import tekirdag from "../assets/projects/tekirdagProje.jpeg";
-import zeytinburnu from "../assets/projects/ZeytinburnuProje.jpeg";
-import bahcelievler from "../assets/projects/bahceliEvler.jpg";
-
-/* === DATA === */
-const ourProjects = [
-  {
-    id: 1,
-    title: "Aydın Park Projesi",
-    description: "Konut projesi",
-    images: [park2, park3, park, park1],
-  },
-  {
-    id: 2,
-    title: "İstanbul / Kartal",
-    description: "Konut projesi",
-    images: [kartal, kartal1, kartal2, kartal3],
-  },
-  {
-    id: 3,
-    title: "İstanbul / Güngören",
-    description: "Konut projesi",
-    images: [güngören, güngören1],
-  },
-  {
-    id: 4,
-    title: "Tekirdağ Projesi",
-    description: "Konut projesi",
-    images: [tekirdag],
-  },
-  {
-    id: 5,
-    title: "Zeytinburnu Projesi",
-    description: "Konut projesi",
-    images: [zeytinburnu],
-  },
-  {
-    id: 6,
-    title: "İstanbul / Bahçelievler",
-    description: "Konut projesi",
-    images: [bahcelievler],
-  },
-];
-
-/* === MODAL === */
 const ImageModal: React.FC<{
   src: string;
   alt: string;
@@ -76,17 +21,21 @@ const ImageModal: React.FC<{
 }> = ({ src, alt, onClose }) => (
   <div
     onClick={onClose}
-    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+    className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Proje görseli"
   >
     <img
       src={src}
       alt={alt}
-      className="max-w-5xl max-h-[90vh] rounded-lg shadow-xl"
-      onClick={(e) => e.stopPropagation()}
+      className="max-h-[90vh] max-w-5xl rounded-lg object-contain shadow-xl"
+      onClick={(event) => event.stopPropagation()}
     />
     <button
+      type="button"
       onClick={onClose}
-      className="absolute top-5 right-5 text-white text-4xl font-bold"
+      className="absolute right-5 top-5 text-4xl font-bold text-white"
       aria-label="Görseli kapat"
     >
       ×
@@ -94,91 +43,138 @@ const ImageModal: React.FC<{
   </div>
 );
 
-/* === PAGE === */
 const ProjectsPage: React.FC = () => {
   const [modalImage, setModalImage] = useState<string | null>(null);
   const [modalAlt, setModalAlt] = useState("");
+  const canonical = `${siteConfig.url}/projects`;
 
-  const openModal = (src: string, alt: string) => {
-    setModalImage(src);
-    setModalAlt(alt);
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${canonical}#project-list`,
+    name: "Biz Aydın Grup Yapı Projeleri",
+    url: canonical,
+    numberOfItems: projectRecords.length,
+    itemListElement: projectRecords.map((project, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: project.title,
+      url: `${siteConfig.url}/projeler/${project.slug}`,
+    })),
   };
 
-  const closeModal = () => {
-    setModalImage(null);
-    setModalAlt("");
-  };
-
-  const renderProjectCard = (p: {
-    id: number;
-    title: string;
-    description: string;
-    images: string[];
-  }) => (
+  const renderProjectCard = (project: ProjectRecord) => (
     <Card
-      key={p.id}
-      className="
-        w-full
-        max-w-sm
-        bg-white
-        rounded-xl
-        p-4
-        shadow-xl
-        transition
-        hover:shadow-2xl
-      "
+      key={project.slug}
+      className="flex h-full min-h-[430px] w-full max-w-sm flex-col rounded-xl bg-white p-4 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl"
     >
       <Carousel className="relative w-full">
         <CarouselContent>
-          {p.images.map((img, idx) => (
-            <CarouselItem key={idx}>
-              <img
-                src={img}
-                alt={`${p.title} ${idx + 1}`}
-                className="h-56 w-full cursor-pointer rounded-md object-cover"
-                onClick={() => openModal(img, `${p.title} ${idx + 1}`)}
-              />
+          {project.images.map((image) => (
+            <CarouselItem key={image.src}>
+              <button
+                type="button"
+                onClick={() => {
+                  setModalImage(image.src);
+                  setModalAlt(image.alt);
+                }}
+                className="block w-full"
+                aria-label={`${image.alt} görselini büyüt`}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="h-56 w-full rounded-md object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
             </CarouselItem>
           ))}
         </CarouselContent>
-
         <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white" />
         <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white" />
       </Carousel>
 
-      <h4 className="mt-3 text-blue-900 text-lg font-bold">{p.title}</h4>
-      <p className="text-sm text-black">{p.description}</p>
+      <div className="flex flex-1 flex-col pt-4">
+        <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold">
+          <MapPin size={14} aria-hidden="true" />
+          {project.location}
+        </span>
+        <h2 className="mt-2 text-lg font-black text-blue-950">
+          {project.cardTitle}
+        </h2>
+        <p className="mt-2 text-sm leading-6 text-slate-700">
+          {project.shortDescription}
+        </p>
+        <Link
+          to={`/projeler/${project.slug}`}
+          className="mt-auto inline-flex w-fit items-center gap-2 rounded-md bg-blue-950 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-gold hover:text-blue-950"
+          aria-label={`${project.cardTitle} detaylarını incele`}
+        >
+          Projeyi İncele
+          <ArrowRight size={16} aria-hidden="true" />
+        </Link>
+      </div>
     </Card>
   );
 
   return (
     <>
       <Helmet>
-        <title>Projelerimiz | Biz Aydın Grup</title>
+        <title>Aydın İnşaat Projeleri | İstanbul Konut ve Dönüşüm</title>
         <meta
           name="description"
-          content="Biz Aydın Grup tarafından tamamlanan İstanbul, Tekirdağ, Kartal, Güngören, Zeytinburnu ve Bahçelievler konut projelerini inceleyin."
+          content="Aydın İnşaat ve Biz Aydın Grup Yapı'nın Güngören, Kartal, Zeytinburnu, Bahçelievler ve İstanbul genelindeki konut ve dönüşüm projelerini inceleyin."
         />
-        <link rel="canonical" href={`${siteConfig.url}/projects`} />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:locale" content="tr_TR" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={siteConfig.brandName} />
+        <meta
+          property="og:title"
+          content="Aydın İnşaat Projeleri | Biz Aydın Grup Yapı"
+        />
+        <meta
+          property="og:description"
+          content="İstanbul'daki kentsel dönüşüm, konut ve yapı projelerimizin fotoğraflarını ve proje ayrıntılarını inceleyin."
+        />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:image" content={`${siteConfig.url}/og.jpg`} />
+        <script type="application/ld+json">
+          {JSON.stringify(itemListSchema)}
+        </script>
       </Helmet>
 
-      <AnimatedSection className="px-6 py-32 text-white">
-        <h2 className="mb-16 text-center text-6xl font-bold bg-gradient-to-r text-blue-900 bg-clip-text">
-          Projeler
-        </h2>
-
+      <AnimatedSection className="px-6 py-28">
         <div className="mx-auto max-w-7xl">
-          <h3 className="mb-10 text-center text-2xl font-semibold text-blue-950">
-            Projelerimiz
-          </h3>
+          <div className="mx-auto mb-14 max-w-4xl text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-gold">
+              Yapı tecrübemiz
+            </p>
+            <h1 className="mt-4 text-4xl font-black text-blue-950 md:text-6xl">
+              Aydın İnşaat projeleri
+            </h1>
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-700">
+              İstanbul'da tamamladığımız ve yürüttüğümüz konut, yapı ve kentsel
+              dönüşüm çalışmalarını ayrı proje sayfalarında inceleyin.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-1 place-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {ourProjects.map(renderProjectCard)}
+          <div className="grid auto-rows-fr grid-cols-1 items-stretch justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {projectRecords.map(renderProjectCard)}
           </div>
         </div>
 
         {modalImage && (
-          <ImageModal src={modalImage} alt={modalAlt} onClose={closeModal} />
+          <ImageModal
+            src={modalImage}
+            alt={modalAlt}
+            onClose={() => {
+              setModalImage(null);
+              setModalAlt("");
+            }}
+          />
         )}
       </AnimatedSection>
     </>

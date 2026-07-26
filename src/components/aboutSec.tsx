@@ -1,5 +1,5 @@
 import React from "react";
-import hakkimizda from "../assets/hakkımızda.jpg";
+import hakkimizda from "../assets/hakkimizda.webp";
 import AnimatedSection from "./animatedSection";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
@@ -14,6 +14,10 @@ const AboutSection = () => {
             src={hakkimizda}
             alt="Biz Aydın Grup hakkımızda görseli"
             className="h-[360px] w-full object-cover md:h-[480px]"
+            loading="lazy"
+            decoding="async"
+            width={1600}
+            height={1099}
           />
           <div className="absolute inset-0 bg-blue-950/35" />
           <div className="absolute bottom-5 left-5 rounded-lg bg-white/95 p-5 shadow-xl">
@@ -28,9 +32,9 @@ const AboutSection = () => {
 
         <div className="rounded-lg border border-white/70 bg-white/75 p-6 text-slate-900 shadow-xl shadow-slate-900/10">
           <p className="text-sm font-bold uppercase text-gold">Hakkımızda</p>
-          <h1 className="mt-3 text-4xl font-extrabold leading-tight text-blue-950 md:text-5xl">
+          <h2 className="mt-3 text-4xl font-extrabold leading-tight text-blue-950 md:text-5xl">
             İstanbul’da güven veren yapı çözümleri.
-          </h1>
+          </h2>
           <p className="mt-6 text-lg leading-8 text-slate-800">
             Biz Aydın Grup Yapı, konut inşaatı, kentsel dönüşüm, kat
             karşılığı proje ve anahtar teslim uygulamalarda planlı, kaliteli ve

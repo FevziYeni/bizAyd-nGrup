@@ -1,127 +1,129 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AnimatedSection from "./animatedSection";
-import { siteConfig } from "../config/site";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { siteConfig } from "../config/site";
 
-const Footer: React.FC = () => {
-  return (
-    <AnimatedSection className="bg-blue-950 px-6 pb-8 pt-12 text-white">
-      <div className="mx-auto mb-8 grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-4">
-        <div>
-          <h3 className="text-xl font-bold mb-3 text-gold">
-            {siteConfig.brandName.toUpperCase()}
-          </h3>
-          <p className="text-sm leading-6 text-white/70">
-            İstanbul merkezli yapı firmamız, kat karşılığı ve kentsel dönüşüm
-            projelerinde güven, kalite ve şeffaf süreç yönetimiyle hizmet verir.
+const Footer: React.FC = () => (
+  <footer className="bg-[#07172e] px-6 pb-8 pt-16 text-white">
+    <div className="mx-auto max-w-7xl">
+      <div className="mb-14 flex flex-col gap-6 border-b border-white/10 pb-10 md:flex-row md:items-end md:justify-between">
+        <div className="max-w-2xl">
+          <p className="text-xs font-bold uppercase tracking-[0.24em] text-gold">
+            Projenizi birlikte değerlendirelim
           </p>
+          <h2 className="mt-3 text-3xl font-black leading-tight md:text-4xl">
+            Güvenli ve değerli yapılar için ilk adımı bugün atın.
+          </h2>
+        </div>
+        <a
+          href={siteConfig.whatsappUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-gold px-6 py-4 font-black text-blue-950 transition hover:bg-white"
+        >
+          <MessageCircle size={19} aria-hidden="true" />
+          WhatsApp’tan Yazın
+        </a>
+      </div>
+
+      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.3fr_0.7fr_0.9fr_1.1fr]">
+        <div>
+          <h3 className="text-xl font-black tracking-[0.08em]">BİZ AYDIN GRUP</h3>
+          <p className="mt-4 max-w-sm text-sm leading-7 text-slate-400">
+            Aydın İnşaat ve Biz Aydın Grup Yapı; İstanbul genelinde kentsel
+            dönüşüm, kat karşılığı inşaat, konut ve anahtar teslim projelerde
+            güvenli, planlı ve şeffaf çözümler sunar.
+          </p>
+          <div className="mt-6 flex gap-3">
+            <a
+              href={`tel:${siteConfig.phoneHref}`}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-gold transition hover:bg-white hover:text-blue-950"
+              aria-label="Telefonla ara"
+            >
+              <Phone size={18} />
+            </a>
+            <a
+              href={`mailto:${siteConfig.email}`}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-gold transition hover:bg-white hover:text-blue-950"
+              aria-label="E-posta gönder"
+            >
+              <Mail size={18} />
+            </a>
+          </div>
         </div>
 
         <div>
-          <h4 className="text-lg font-semibold mb-2 text-gold">
-            Sayfalar
+          <h4 className="text-sm font-black uppercase tracking-[0.16em] text-gold">
+            Kurumsal
           </h4>
-          <ul className="space-y-2 text-sm text-white/75">
+          <ul className="mt-5 space-y-3 text-sm text-slate-400">
+            <li><Link to="/" className="hover:text-white">Anasayfa</Link></li>
+            <li><Link to="/about" className="hover:text-white">Hakkımızda</Link></li>
+            <li><Link to="/projects" className="hover:text-white">Projelerimiz</Link></li>
+            <li><Link to="/sikca-sorulan-sorular" className="hover:text-white">Sıkça Sorulan Sorular</Link></li>
+            <li><Link to="/contact" className="hover:text-white">İletişim</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-sm font-black uppercase tracking-[0.16em] text-gold">
+            Hizmetler
+          </h4>
+          <ul className="mt-5 space-y-3 text-sm text-slate-400">
             <li>
-              <Link to="/" className="hover:underline" aria-label="Anasayfa">
-                Anasayfa
+              <Link to="/istanbul-kentsel-donusum" className="hover:text-white">
+                Kentsel Dönüşüm
               </Link>
             </li>
             <li>
-              <Link
-                to="/projects"
-                className="hover:underline"
-                aria-label="Projelerimiz"
-              >
-                Projeler
+              <Link to="/istanbul-kentsel-donusum" className="hover:text-white">
+                Kat Karşılığı İnşaat
               </Link>
             </li>
             <li>
-              <Link
-                to="/about"
-                className="hover:underline"
-                aria-label="Hakkımızda"
-              >
-                Hakkımızda
+              <Link to="/istanbul-kentsel-donusum" className="hover:text-white">
+                Konut Projeleri
               </Link>
             </li>
             <li>
-              <Link
-                to="/contact"
-                className="hover:underline"
-                aria-label="İletişim"
-              >
-                İletişim
+              <Link to="/istanbul-kentsel-donusum" className="hover:text-white">
+                Anahtar Teslim İnşaat
               </Link>
             </li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-lg font-semibold mb-2 text-gold">
+          <h4 className="text-sm font-black uppercase tracking-[0.16em] text-gold">
             İletişim
           </h4>
-          <ul className="space-y-2 text-sm text-white/75">
+          <ul className="mt-5 space-y-4 text-sm leading-6 text-slate-400">
+            <li className="flex gap-3">
+              <MapPin className="mt-1 shrink-0 text-gold" size={17} aria-hidden="true" />
+              {siteConfig.address}
+            </li>
             <li>
-              <a
-                href={`tel:${siteConfig.phoneHref}`}
-                className="inline-flex items-center gap-2 hover:underline"
-                aria-label="Telefon"
-              >
-                <Phone size={15} aria-hidden="true" />
+              <a href={`tel:${siteConfig.phoneHref}`} className="flex gap-3 hover:text-white">
+                <Phone className="shrink-0 text-gold" size={17} aria-hidden="true" />
                 {siteConfig.phoneDisplay}
               </a>
             </li>
             <li>
-              <a
-                href={`mailto:${siteConfig.email}`}
-                className="inline-flex items-center gap-2 hover:underline"
-                aria-label="E-posta"
-              >
-                <Mail size={15} aria-hidden="true" />
+              <a href={`mailto:${siteConfig.email}`} className="flex gap-3 hover:text-white">
+                <Mail className="shrink-0 text-gold" size={17} aria-hidden="true" />
                 {siteConfig.email}
               </a>
             </li>
-            <li className="inline-flex items-center gap-2">
-              <MapPin size={15} aria-hidden="true" />
-              {siteConfig.address}
-            </li>
           </ul>
         </div>
-
-        <div>
-          <h4 className="text-lg font-semibold mb-2 text-gold">
-            Hızlı Ulaşım
-          </h4>
-          <div className="flex flex-col gap-2 text-sm text-white/75">
-            <a
-              href={siteConfig.whatsappUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 hover:underline"
-            >
-              <MessageCircle size={16} aria-hidden="true" />
-              WhatsApp ile yazın
-            </a>
-            <a
-              href={`mailto:${siteConfig.email}`}
-              className="inline-flex items-center gap-2 hover:underline"
-            >
-              <Mail size={16} aria-hidden="true" />
-              Teklif talebi gönderin
-            </a>
-          </div>
-        </div>
       </div>
 
-      <div className="mx-auto max-w-7xl border-t border-white/15 pt-5 text-center text-sm text-white/60">
-        © {new Date().getFullYear()} BİZ AYDIN GRUP | İstanbul. Kat
-        karşılığı ve kentsel dönüşüm projelerinde güvenle hizmet vermektedir.
-        Tüm hakları saklıdır.
+      <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+        <p>© {new Date().getFullYear()} Biz Aydın Grup Yapı. Tüm hakları saklıdır.</p>
+        <p>Güngören merkezli • İstanbul genelinde hizmet</p>
       </div>
-    </AnimatedSection>
-  );
-};
+    </div>
+  </footer>
+);
 
 export default Footer;

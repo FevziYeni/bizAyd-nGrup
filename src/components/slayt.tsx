@@ -1,78 +1,95 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import bgImage from "../assets/bg_image.jpg";
-import AnimatedSection from "./animatedSection";
+import { Link } from "react-router-dom";
+import {
+  ArrowRight,
+  Building2,
+  CheckCircle2,
+  MapPin,
+  ShieldCheck,
+} from "lucide-react";
 import { siteConfig } from "../config/site";
-import { ArrowRight, Building2, ShieldCheck } from "lucide-react";
 
-const HeroSection = () => {
-  const navigate = useNavigate();
+const HeroSection: React.FC = () => (
+  <section className="relative min-h-[760px] overflow-hidden bg-blue-950 text-white">
+    <img
+      src="/hero.webp"
+      alt="Biz Aydın Grup İstanbul kentsel dönüşüm ve konut projesi"
+      className="absolute inset-0 h-full w-full object-cover object-center"
+      width={1620}
+      height={1080}
+    />
+    <div className="absolute inset-0 bg-blue-950/55" />
+    <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,18,38,0.98)_0%,rgba(5,18,38,0.88)_42%,rgba(5,18,38,0.35)_75%,rgba(5,18,38,0.2)_100%)]" />
+    <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-blue-950/80 to-transparent" />
 
-  return (
-    <section className="relative min-h-[680px] w-full overflow-hidden">
-      <img
-        src={bgImage}
-        alt="Biz Aydın Grup İstanbul kentsel dönüşüm ve konut projeleri"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
+    <div className="relative mx-auto flex min-h-[760px] max-w-7xl items-center px-6 py-24">
+      <div className="max-w-4xl">
+        <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-gold backdrop-blur">
+          <MapPin size={16} aria-hidden="true" />
+          Güngören merkezli • İstanbul genelinde
+        </div>
 
-      <div className="absolute inset-0 bg-blue-950/70" />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,6,23,0.9),rgba(2,6,23,0.58),rgba(2,6,23,0.18))]" />
+        <h1 className="mt-7 max-w-4xl text-4xl font-black leading-[1.08] tracking-[-0.035em] sm:text-5xl md:text-7xl">
+          Aydın İnşaat ile İstanbul’da güvenli kentsel dönüşüm
+        </h1>
 
-      <div className="relative z-20 mx-auto flex min-h-[680px] max-w-7xl items-center px-6 py-24 text-white">
-        <div className="max-w-3xl">
-          <AnimatedSection>
-            <p className="text-sm font-bold uppercase text-gold">
-              {siteConfig.legalName}
-            </p>
-            <h1 className="mt-4 text-5xl font-extrabold leading-tight md:text-7xl">
-              {siteConfig.slogan}
-            </h1>
-          </AnimatedSection>
+        <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-200 md:text-xl">
+          {siteConfig.legalName}, Aydın İnşaat hizmetleri kapsamında 40 yılı
+          aşan saha tecrübesiyle kentsel dönüşüm, kat karşılığı inşaat ve
+          anahtar teslim konut projelerini şeffaf ve planlı bir süreçle hayata
+          geçirir.
+        </p>
 
-          <AnimatedSection>
-            <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-white/85">
-              40 yıllık tecrübeyle İstanbul’da konut inşaatı, kentsel dönüşüm,
-              kat karşılığı ve anahtar teslim proje hizmetleri sunuyoruz.
-            </p>
-          </AnimatedSection>
+        <div className="mt-9 flex flex-wrap gap-3">
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 rounded-full bg-gold px-7 py-4 font-bold text-blue-950 shadow-lg transition hover:-translate-y-0.5 hover:bg-white"
+          >
+            Projenizi değerlendirelim
+            <ArrowRight size={19} aria-hidden="true" />
+          </Link>
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-2 rounded-full border border-white/40 bg-white/5 px-7 py-4 font-bold text-white backdrop-blur transition hover:bg-white hover:text-blue-950"
+          >
+            Projelerimizi inceleyin
+          </Link>
+        </div>
 
-          <AnimatedSection>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <button
-                onClick={() => navigate("/projects")}
-                aria-label="Biz Aydın Grup projelerini görüntüle"
-                className="inline-flex items-center gap-2 rounded-md bg-gold px-6 py-3 font-semibold text-black transition hover:bg-white"
-              >
-                Projelerimizi Gör
-                <ArrowRight size={18} aria-hidden="true" />
-              </button>
-              <button
-                onClick={() => navigate("/contact")}
-                aria-label="Biz Aydın Grup ile iletişime geç"
-                className="rounded-md border border-white/70 px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-blue-950"
-              >
-                İletişime Geç
-              </button>
-            </div>
-          </AnimatedSection>
-
-          <AnimatedSection>
-            <div className="mt-10 grid max-w-2xl gap-3 sm:grid-cols-2">
-              <div className="flex items-center gap-3 rounded-lg border border-white/15 bg-white/10 p-4 backdrop-blur">
-                <ShieldCheck className="text-gold" size={24} />
-                <span className="font-semibold">Güvenli yapı yaklaşımı</span>
+        <div className="mt-12 grid max-w-3xl gap-3 sm:grid-cols-3">
+          {[
+            {
+              icon: ShieldCheck,
+              value: "40+ Yıl",
+              label: "İnşaat tecrübesi",
+            },
+            {
+              icon: Building2,
+              value: "15+ Proje",
+              label: "Tamamlanan uygulama",
+            },
+            {
+              icon: CheckCircle2,
+              value: "Uçtan Uca",
+              label: "Planlı proje yönetimi",
+            },
+          ].map(({ icon: Icon, value, label }) => (
+            <div
+              key={value}
+              className="flex items-center gap-3 border-l border-white/20 py-2 pl-4"
+            >
+              <Icon className="shrink-0 text-gold" size={24} aria-hidden="true" />
+              <div>
+                <strong className="block text-sm font-extrabold">{value}</strong>
+                <span className="text-xs text-slate-300">{label}</span>
               </div>
-              <div className="flex items-center gap-3 rounded-lg border border-white/15 bg-white/10 p-4 backdrop-blur">
-                <Building2 className="text-gold" size={24} />
-                <span className="font-semibold">Kat karşılığı projeler</span>
-              </div>
             </div>
-          </AnimatedSection>
+          ))}
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+
+  </section>
+);
 
 export default HeroSection;
