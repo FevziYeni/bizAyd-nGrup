@@ -15,13 +15,13 @@ export const siteConfig = {
   whatsappUrl: `https://wa.me/905324054677?text=${encodeURIComponent(
     whatsappMessage
   )}`,
-  address: "Haznedar Mah., Panayır Sok. No: 3A, 34160 Güngören / İstanbul",
-  streetAddress: "Haznedar Mah., Panayır Sok. No: 3A",
-  postalCode: "34160",
-  addressLocality: "Güngören",
-  addressRegion: "İstanbul",
-  latitude: 41.0110789,
-  longitude: 28.8658947,
+  address: "Haznedar Mah., Ordu Sok. No: 13, Daire: 3, Giriş Kat, 34160 Güngören / İstanbul",
+streetAddress: "Haznedar Mah., Ordu Sok. No: 13",
+postalCode: "34160",
+addressLocality: "Güngören",
+addressRegion: "İstanbul",
+latitude: 41.011053100050695,
+longitude: 28.868558210291564,
 };
 
 export const localBusinessSchema = {
